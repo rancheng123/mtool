@@ -1,0 +1,9 @@
+{
+  "code": 200,
+  "data": {
+    "name": "Tony",
+    "age": 12,
+    "birthday": "2004-10-20T04:06:19.106Z",
+    "colour_of_skin": "black"
+  }
+}

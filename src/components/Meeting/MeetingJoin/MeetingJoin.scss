@@ -1,0 +1,15 @@
+.meeting-join {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .join-form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > input, button, div {
+            margin: 2px auto
+        }
+    }
+}

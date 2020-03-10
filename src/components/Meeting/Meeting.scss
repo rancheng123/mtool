@@ -1,0 +1,215 @@
+@import "../../assets/scss/vars";
+
+.choose-meeting {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    .video-title {
+        top: 30px;
+        background: #44434B;
+        height: 45px;
+        color: #ffffff;
+        width:100%;
+        text-align: center;
+        line-height: 45px;
+        z-index: 100;
+        position: absolute;
+        .back {
+            width:25px;
+            height:25px;
+            position: absolute;
+            left:30px;
+            top:10px;
+            background-image: url("~assets/img/backarrow.png");
+            background-repeat: no-repeat;
+            &:hover {
+                cursor:pointer;
+            }
+            color: #FFFFFF;
+        }
+    }
+    .choose-meeting-menu {
+        @include flexRow();
+        @include flexJustCenter();
+        @include flexAlignStretch();
+        width: 100%;
+        height: calc(100% - 140px);
+        margin-top: 140px; // 30 + 60 + 50
+        .main-menu-item {
+            width: 100%;
+            @include flexColumn();
+            @include flexJustCenter();
+            @include flexAlignCenter();
+            color: #FFFFFF;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.20);
+            box-sizing: border-box;
+            position: relative;
+            cursor: pointer;
+            border-top: 1px solid #545454;
+            overflow: hidden;
+
+            &:first-child {
+                border-right: 1px solid #545454;
+            }
+
+            .menu-wrap {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                @include flexColumn();
+                @include flexJustCenter();
+                @include flexAlignCenter();
+                transition: all ease 0.3s;
+
+                &:focus,
+                &:hover {
+                    transform: scale(1.2);
+                    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.20);
+                    background-image: linear-gradient(-180deg, #63646F 0%, #454453 100%);
+                    .item-icon {
+                        filter: none !important;
+                    }
+                }
+
+                &:active {
+                    transform: scale(1.1);
+                }
+
+                .item-icon {
+                    width: 75px;
+                    height: 75px;
+                    object-fit: contain;
+                    transition: all ease 0.3s;
+                    filter: grayscale(100%);
+                }
+
+                .item-title {
+                    font-size: 15px;
+                    margin: 16px 0 20px;
+                }
+            }
+        }
+    }
+
+}
+
+.video-start {
+    width: 100%;
+    overflow-y: hidden;
+    margin-top: 140px;
+    height: calc(100% - 140px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #fff;
+    input::-webkit-input-placeholder {
+        color: #fff;
+
+    }
+
+    .video-start-title {
+        margin-top: 30px;
+        background: #44434B;
+        height: 45px;
+        line-height: 45px;
+        position: relative;
+    }
+
+    .video-start-info {
+        margin: 8px 0 0;
+    }
+
+    .errors {
+        display: table;
+        height: 20px;
+        width: 100%;
+        margin: 0 auto;
+        .error-tip {
+            color: #D76F71;
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            top: 0px;
+        }
+    }
+
+    input {
+        width: 150px;
+        height: 40px;
+        color: #fff;
+
+        background: #45454F;
+        border-radius: 50px;;
+        text-align: center;
+        display: block;
+
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1vh 1.8vw;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+
+        font-family: PingFangTC-Regular;
+        line-height: 16.5px;
+        box-sizing: border-box;
+        &:focus {
+            border: 1px solid $primary-color;
+        }
+    }
+
+    input.error {
+        border: 1px solid red;
+    }
+
+    .confirm {
+        width:150px;
+        height:40px;
+        color:#FFFFFF;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        font-family: PingFangTC-Regular;
+        line-height: 16.5px;
+        border-radius: 50px;
+        background: linear-gradient(to right, #54B4FF 0%,#7D6BFF 100% );
+        &:hover {
+            -webkit-filter:grayscale(20%);
+            -webkit-filter:brightness(90%);
+            cursor:pointer;
+        }
+    }
+    .vip {
+
+    }
+
+    .divide {
+        max-width: 500px;
+        width: 26vw;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        margin: 0 auto 8.5vh;
+    }
+
+    .btn-transparent {
+        transition: all ease 0.3s;
+        width: 5.2vw;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: rgba(255, 122, 122, 0.60);
+
+            span:nth-child(2) {
+                display: inline !important;
+            }
+
+            span:first-child {
+                display: none;
+            }
+        }
+    }
+}

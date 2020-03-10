@@ -1,0 +1,54 @@
+@import "../../assets/scss/vars";
+.navMenu {
+    background:transparent;
+    width: 100%;
+    text-align: center;
+    @include border-box();
+    .navMenu-item {
+        .link {
+            cursor: pointer;
+            padding:10px 20px;
+            display: block;;
+            color: $font-dark;
+            transition: background ease-out .3s;
+            &:hover,
+            &:focus,
+            &:active {
+                background: #151e28;
+                // color:$second-color;
+                i {
+                   filter: contrast(8); 
+                }
+            }
+            &.actived{
+                background: #151e28;
+                // color:$second-color;
+                i {
+                   filter: contrast(8); 
+                }
+            }
+            .text {
+                vertical-align: middle;
+                font-size:$font15;
+            }
+            i {
+                background-position: center center;
+                filter: contrast(.3);
+            }
+
+        }
+        &:nth-child(4) {
+            position: absolute;
+            bottom: 69px;
+            left: 50%;
+            @include translate(-50%,0);
+        }
+
+        &:last-child {
+            position: absolute;
+            bottom: 33px;
+            left: 50%;
+            @include translate(-50%,0);
+        }
+    }
+}

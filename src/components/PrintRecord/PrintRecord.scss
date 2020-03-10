@@ -1,0 +1,217 @@
+@import "../../assets/scss/vars";
+
+.printRecord {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: #fff;
+    position: relative;
+    @include flexRow();
+    @include flexJustCenter();
+    @include flexAlignStretch();
+
+    .topBarLeftTitle {
+        margin-left: 30px;
+        color: #797979;
+    }
+    .print-record-left {
+        width:40%;
+        @include flexColumn();
+        @include flexJustCenter();
+        @include flexAlignCenter();
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+        .printer-img {
+            width: 198.25px;
+            margin-bottom:10px;
+        }
+        .tip {
+            margin-bottom:20px;
+            opacity: 0.5;
+        }
+    }
+    .print-record-right {
+        width:60%;
+        @include flexColumn();
+        @include flexJustCenter();
+        @include flexAlignCenter();
+    }
+    .content-top-tip {
+        text-align: center;
+        padding: 10px 20px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.20);
+        box-sizing: border-box;
+    }
+    .content-top-desc {
+        text-align: center;
+        margin-bottom: 6.5vh;
+        margin-top: 11.7vh;
+    }
+    .content-list {
+        width: 90%;
+        max-height: 60vh;
+        overflow-y: auto;
+        
+        .title {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .item {
+            border-bottom: 1px solid rgba(216, 216, 216, 0.2);
+            padding: 10px 0px;
+            @include flexRow();
+            @include flexJustBetween();
+            @include flexAlignCenter();
+            &:nth-child(2n+1) {
+                background: transparent;
+            }
+            .title {
+                text-align: center;
+            }
+            .print{
+                
+                position: relative;
+                @include border-radius(2px);
+                display: inline-block;
+                &:hover {
+                    filter:grayscale(20%);
+                    filter:(90%);
+                    cursor:pointer;
+                }
+                height: 25px;
+                width: 60px;
+                padding: 0;
+                margin: 0 25px 0 0;
+                border: none;
+                background-image: linear-gradient(-168deg, #57ADFF 0%, #7C6EFF 100%);
+                border-radius: 50px;
+                font: 12px !important;
+            }
+
+            .left {
+                @include flexNum();
+                @include flexRow();
+                @include flexAlignCenter();
+                max-width: 60%;
+                padding-right: 20px;
+                .desc {
+                    @include flexNum();
+                    max-width: 100%;
+                    margin-left: 5px;
+                    p {
+                        line-height: 1.6;
+                    }
+                }
+            }
+
+            .right {
+                span:nth-child(2) {
+                    margin-left: 30px;
+                }
+                &.border-right {
+                    border: solid 1px #bdbdbd;
+                    @include border-radius(2px);
+                    line-height: 23px;
+                }
+                .red {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $alert-color;
+                }
+                .reduce,
+                .add,
+                .num {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    background-color: $body-gray;
+                    text-align: center;
+                    line-height: 23px;
+                    &:nth-child(1) {
+                        border-right: solid 1px #bdbdbd;
+                        color: #757575;
+                        margin-right: -3px;
+                    }
+                    &:nth-child(2) {
+                        border-color: transparent;
+                        background-color: $body-bg;
+                        width: 34px;
+                        height: 24px;
+                        font-size: 13px;
+                        color: #000;
+                    }
+                    &:nth-child(3) {
+                        border-left: solid 1px #bdbdbd;
+                        color: #757575;
+                        margin-left: -3px;
+                    }
+                }
+            }
+            label {
+                @include flexRow();
+                @include flexJustBetween();
+                @include flexAlignCenter();
+            }
+        }
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    input[type="checkbox"] + label {
+        position: relative;
+        padding-left: 25px;
+        &:before {
+            content:'';
+            border-radius: 4px;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            @include translate(0,-50%);
+        }
+    }
+    input[type="checkbox"]:not(:checked) + label {
+        &:before {
+            background: transparent;
+            border: 2px solid #EEEEEE;
+            width: 0.67vw;
+            height: 0.67vw;
+            min-width: 13px;
+            min-height: 13px;
+            border-radius: 4px;
+        }
+    }
+    input[type="checkbox"]:checked + label {
+        &:before {
+            background: url('~assets/img/right_icon.png') $primary-color center center no-repeat;
+            background-size: 80%;
+            min-width: 18px;
+            min-height: 18px;
+            width: 0.9vw;
+            height: 0.9vw;
+            border-radius: 4px;
+        }
+    }
+    .content-list-button {
+        border-top: 1px solid #8C8C8C;
+        padding: 10px 20px;
+        max-width: 80%;
+        margin: 0 auto;
+        width: 46vw;
+        box-sizing: border-box;
+        @include flexRow();
+        @include flexJustBetween();
+        @include flexAlignCenter();
+        .btn-primary {
+            border-radius: 3px;
+            padding: 5px 15px;
+        }
+        input[type="checkbox"] + label {
+            box-sizing: content-box;
+        }
+    }
+}

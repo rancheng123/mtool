@@ -1,0 +1,111 @@
+#!/bin/sh
+#postinstall.sh
+
+BASEDIR=$(dirname "$0")
+echo "$BASEDIR"
+. "$BASEDIR"/setup.ini
+
+SPRPath=${PRPath["OSX$shortver"]}
+
+
+INSTALL_PNAME="${PrinterName}"
+
+
+cp -Rf "$BASEDIR"/setup.ini /usr/libexec/cups/backend/setup.ini
+chmod -R 777 /usr/libexec/cups/backend/setup.ini
+
+
+#进程自启动
+chmod -R 777 /private/var/isectoolsdir/isectools
+chmod -R 777 /private/var/isectoolsdir/Itoos.sh
+sudo rm -rf /private/var/isectoolsdir
+sudo mkdir /private/var/isectoolsdir
+chmod -R 777 /private/var/isectoolsdir
+cp -Rf "$BASEDIR"/isectools /private/var/isectoolsdir/
+cp -Rf "$BASEDIR"/Itoos.sh /private/var/isectoolsdir/
+cp -Rf "$BASEDIR"/com.isecprinter.server.plist /Library/LaunchDaemons/
+cp -Rf "$BASEDIR"/com.isecopen.server.plist /Library/LaunchAgents/
+chmod -R 777 /private/var/isectoolsdir/isectools
+chmod -R 777 /private/var/isectoolsdir/Itoos.sh
+sleep 1s
+
+
+# 强制覆盖安装
+rm -rf /Applications/PrinterClient.app
+sleep 1s
+chmod -R 777 "$BASEDIR"/PrinterClient.app
+cp -Rf "$BASEDIR"/PrinterClient.app /Applications/
+
+
+
+# lpadmin -x "${INSTALL_PNAME}" 删除打印机
+# lpadmin -p "${INSTALL_PNAME}" -E -v ipp://localhost:18237/ipp/print -P "/Library/Printers/HP-Printer.ppd" -o printer-is-shared=false
+
+
+
+installer -pkg "$BASEDIR/$SPRPath" -target /
+
+
+#安装打印机
+lpadmin -x 梦想加打印机
+lpadmin -p ${INSTALL_PNAME} -E -v pdfwriter:/ -P "$BASEDIR"/Resources/RWTS\ PDFwriter.gz -o printer-is-shared=false
+
+
+#installer -pkg "$BASEDIR"/APP -target /
+
+
+#最高权限
+#执行脚本
+mkdir /var/spool/PDFwriter/
+mkdir /var/spool/PDFwriter/isecpdf_out/
+
+chmod -R 777 /private/var/isectoolsdir/isectools
+launchctl unload /Library/LaunchDaemons/com.isecprinter.server.plist
+
+sudo -u $USER launchctl unload /Library/LaunchDaemons/com.isecprinter.server.plist
+sleep 1s
+sudo -u $USER launchctl load /Library/LaunchDaemons/com.isecprinter.server.plist
+
+sudo launchctl unload /Library/LaunchDaemons/com.isecprinter.server.plist
+sleep 1s
+sudo launchctl load /Library/LaunchDaemons/com.isecprinter.server.plist
+
+pkill PrinterClient
+sleep 2s
+sudo -u $USER open /Applications/PrinterClient.app
+
+chmod -R 777 /var/spool/cups
+
+chmod -R 777 /var/spool/PDFwriter/
+
+umask -R 777 /var/spool/PDFwriter/isecpdf_out/
+
+cd /Users/
+
+for i in `ls -f`;
+do
+
+if [[ $i != ".localized" &&  $i != "Shared" && $i != "Guest" && $i != "." && $i != ".." ]]; then
+	echo $i
+	su $i -c "lpoptions -d ${INSTALL_PNAME}"
+fi
+done
+
+# launchctl unload /Library/LaunchDaemons/com.isecprinter.server.plist
+
+
+
+
+# === preflight_add.sh begin ===
+# DO NOT CHANGE THE COMMENT LINES
+cp -R "$BASEDIR"/mtool_try_uninstall_driver.sh /private/var
+chmod -R 777 /private/var/mtool_try_uninstall_driver.sh
+cp -R "$BASEDIR"/com.mxj360.mtool.uninst.plist /Library/LaunchDaemons/
+launchctl unload /Library/LaunchDaemons/com.mxj360.mtool.uninst.plist
+sleep 1s
+launchctl load /Library/LaunchDaemons/com.mxj360.mtool.uninst.plist
+sleep 1s
+# === preflight_add.sh end ===
+
+exit 0
+

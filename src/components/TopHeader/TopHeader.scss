@@ -1,0 +1,42 @@
+@import "../../assets/scss/vars";
+.header-close-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.50);
+    width: 100%;
+    @include flexRow();
+    @include flexJustBetween();
+    @include flexAlignCenter();
+    @include flexAlignStretch();
+    .btn-wrapper {
+        padding: 6px 16px 8px 16px;
+        width: 46px;
+        @include border-box();
+        &:hover,
+        &:focus {
+            img:first-child {
+                display: none;
+            }
+            img:nth-child(2) {
+                display: inline !important;
+            }
+        }
+        .close-icon {
+            width: 1.3vh;
+            @include border-radius(50%);
+            height: 1.3vh;
+            min-height: 14px;
+            min-width: 14px;
+        }
+    }
+    .login-close-icon {
+        display: block;
+    }
+    .drag-area {
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-app-region: drag;
+    }
+}

@@ -1,0 +1,547 @@
+@import "../../assets/scss/vars";
+
+.templateUI {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: url('~assets/img/bg_a.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-close-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.50);
+    width: 100%;
+    @include flexRow();
+    @include flexJustBetween();
+    @include flexAlignCenter();
+    @include flexAlignStretch();
+    .btn-wrapper {
+        padding: 6px 16px 8px 16px;
+        width: 46px;
+        @include border-box();
+        &:hover,
+        &:focus {
+            img:first-child {
+                display: none;
+            }
+            img:nth-child(2) {
+              display: inline !important;
+            }
+        }
+        .close-icon {
+            width: 1.3vh;
+            @include border-radius(50%);
+            height: 1.3vh;
+            min-height: 14px;
+            min-width: 14px;
+          }
+    }
+    .login-close-icon {
+        display: block;
+    }
+    .drag-area {
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-app-region: drag;
+    }
+}
+
+
+// 登录页面
+.login-new {
+    width: 100%;
+    height: 100%;
+    @include flexRow();
+    @include flexAlignCenter();
+    @include flexJustCenter();
+    overflow-y: auto;
+    .page-wrapper {
+        .login-logo {
+            width: 4vw;
+            margin-top: 3vh;
+            margin-bottom: 5.8vh;
+        }
+
+        .login-qr {
+            img {
+                width: 7.8vw;
+                height: 7.8vw;
+                object-fit: cover;
+            }
+
+            .get-qrcode {
+                width: auto;
+                height: auto;
+                border-radius: 0;
+                margin: auto;
+                color: $font-blue;
+                &:hover {
+                    cursor: pointer;
+                }
+                &:active,
+                &:focus {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+            .login-tip {
+                color: #1B2835;
+                // font-size: 18px;
+                margin: 10px 0 2.6vw 0;
+            }
+            .login-info {
+                color: #A5A5A5;
+                // font-size: 18px;
+            }
+            
+        }
+        .network-error {
+            padding:4.6vw 3.1vw;
+            @include flexColumn();
+            @include flexAlignCenter();
+            .err-msg {
+                color: red;
+                // font-size: 14px;
+                padding-bottom: 1.8vh;
+            }
+        }
+        .setting-area {
+            position: absolute;
+            top: 1.8vh;
+            right: 1.3vw;
+            .link {
+                cursor: pointer;
+                padding: 0.9vh 5px;
+                display: block;;
+                color: $font-dark;
+                transition: background ease-out .3s;
+                &:hover,
+                &:focus,
+                &:active {
+                    .icon {
+                       filter: contrast(.6); 
+                    }
+                }
+                // &.actived{
+                //     i {
+                //        filter: contrast(.6); 
+                //     }
+                // }
+                .icon {
+                    background-position: center center;
+                    filter: contrast(.3);
+                }
+            }
+        }
+    }
+}
+
+// 主菜单页面
+.main-page {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    .user-row {
+        margin-top: 13.2vh;
+        margin-right: 4vw;
+        @include flexRow();
+        @include flexJustEnd();
+        @include flexAlignCenter();
+        .picture {
+            width: 4.2vw;
+            margin: 0 0 0 16px;
+        }
+        .user-row-logout {
+            padding: 1.6vh 0.9vw;
+            @include flexRow();
+            @include flexJustBetween();
+            @include flexAlignCenter();
+            position: relative;
+            background: rgba(255,255,255,0.30);
+            box-shadow: 0 0 0 0 rgba(0,0,0,0.20), 0 4px 10px 0 rgba(0,0,0,0.20);
+            border-radius: 5px;
+            &:after {
+                content: "";
+                width: 14px;
+                height: 14px;
+                border: 1px solid #6E757D;
+                border-left-width: 0;
+                border-bottom-width: 0;
+                transform: translate(0,-50%) rotate(45deg);
+                position: absolute;
+                right: -8px;
+                top: 50%;
+                background: #6E757D;
+                display: inline-block;
+                border-radius: 3px;
+            }
+            p {
+                line-height: 1.8;
+                color: #fff;
+                margin-right: 1.8vw;
+            }
+        }
+    }
+
+    .main-menu {
+        @include flexRow();
+        @include flexJustCenter();
+        @include flexAlignStretch();
+        padding-top: 16.4vh;
+        .main-menu-item {
+            width: 30%;
+            padding: 6vh 3.4vw;
+            color: #FFFFFF;
+            text-align: center;
+            transition: all ease .5s;
+            box-sizing: border-box;
+            &:hover,
+            &:active,
+            &:focus {
+                background: rgba(255,255,255,0.20);
+                border: 1px solid #FFFFFF;
+                box-shadow: 0 2px 38px 0 rgba(37,37,37,0.50);
+                border-radius: 8px;
+                .item-icon:first-child {
+                    display: none;
+                }
+                .item-icon:nth-child(2) {
+                    display: inline !important;
+                }
+            }
+            &:first-child {
+                .item-icon {
+                    max-width: 7.8vw;
+                }
+            }
+            .item-icon {
+                max-width: 6.6vw;
+                width: 100%;
+                height: 13.8vh;
+                object-fit: contain;
+                transition: all ease .3s;
+            }
+            .item-title {
+                // font-size: 30px;
+                margin: 16px 0 20px 0;
+            }
+            .item-info {
+                // font-size: 20px;
+            }
+        }
+    }
+}
+
+// 设置页面
+.setting-page {
+    width: 100%;
+    height: 100%;
+    @include flexRow();
+    @include flexAlignCenter();
+    @include flexJustCenter();
+    overflow-y: auto;
+    .page-wrapper {
+        padding: 6.5vh 3.1vw 4.6vh 3.1vw;
+        .btn-area {
+            padding-top: 6.9vh;
+            @include flexRow();
+            @include flexJustCenter();
+            @include flexAlignCenter();
+            button {
+                margin:0;
+                &:first-child {
+                    margin-right:1vw;
+                }
+            }
+        }
+        input{
+            border-bottom: 1px solid $border-gray;
+            margin-bottom: 3.7vh;
+            // font-size: $font13;
+            margin-top: 0.9vh;
+            width: 100%;
+            &:focus{
+                border-bottom: 1px solid $primary-color;
+            }
+        }
+        p{
+            color: $font-dark;
+            // font-size: $font15;
+        }
+        .confirm{
+            margin: 0 auto;
+            border-radius: 100px;
+            padding: 8px 3.1vw;
+            // font-size: 22px;
+        }
+        .auto-start {
+            margin-bottom:16px;
+            // font-size: $font12;
+            input[type="checkbox"] {
+                display: none;
+            }
+            input[type="checkbox"] + label {
+                position: relative;
+                padding-left: 20px;
+                &:before {
+                    content:'';
+                    width: 15px;
+                    height: 15px;
+                    background-size: 1.56vw auto;
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    @include translate(0,-50%);
+                }
+            }
+            input[type="checkbox"]:not(:checked) + label {             
+                &:before {
+                    background: #fff;
+                    border: 1px solid $primary-color;
+                }
+            }
+            input[type="checkbox"]:checked + label {
+                &:before {
+                    background: url('~assets/img/right_icon.png') $primary-color center center no-repeat;
+                    background-size: 80%;
+                }
+            }
+        }
+        .close-btn {
+            position: absolute;
+            top: 1.85vh;
+            right: 1.3vw;
+            padding: 10px 5px;
+            img {
+                width: 0.8vw;
+            }
+        }
+    }
+}
+
+
+.choose-meeting {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    .choose-meeting-button {
+        margin: 41.7vh 0 26.8vh 0;
+        display: inline-block;
+        color: #fff;
+        img {
+            max-height: 9vh;
+            max-width: 5vw;
+            border-radius: 50%;
+            margin-bottom: 2.7vh;
+        }
+    }
+    .choose-meeting-button + .choose-meeting-button {
+        margin-left: 6.77vw;
+    }
+}
+
+.video-start {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    color: #fff;
+    .video-start-title {
+        margin-top: 31vh;
+    }
+    .video-start-info {
+        margin: 8px 0 8.8vh 0;
+    }
+    input {
+        max-width: 500px;
+        width: 26vw;
+        background: rgba(255,255,255,0.20);
+        border: 2px solid $primary-color;
+        border-radius: 8px;
+        margin-bottom: 2.8vh;
+        padding: 10px 1.8vw;
+        box-sizing: border-box;
+    }
+    .btn-primary {
+        max-width: 500px;
+        width: 26vw;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+    .divide {
+        max-width: 500px;
+        width: 26vw;
+        border: 1px solid rgba(255,255,255,0.35);
+        margin: 12.6vh auto 8.5vh auto;
+    }
+    .btn-transparent {
+        transition: all ease .3s;
+        width: 5.2vw;
+        &:hover,
+        &:active,
+        &:focus {
+            background: rgba(255,122,122,0.60);
+            span:nth-child(2) {
+                display: inline !important;
+            }
+            span:first-child {
+                display: none;
+            }
+        }
+    }
+}
+
+
+// 控制屏幕
+.control-screen {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    color: #fff;
+    position: relative;
+    .control-screen-title {
+        margin: 38.6vh auto 0 auto;
+        max-width: 60%;
+    }
+    .control-screen-num {
+        margin: 8px auto 4vh auto;
+        max-width: 60%;
+    }
+    .control-screen-button {
+        max-width: 60%;
+        margin: 0 auto;
+        div {
+            background: rgba(0,0,0,0.20);
+            width: 8.1vh;
+            height: 8.1vh;
+            min-height: 50px;
+            min-width: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: all ease .3s;
+            position: relative;
+            img {
+                width: 7vh;
+                min-width: 40px;
+                position: absolute;
+                top: 50%;
+                left: 50;
+                transform: translate(-50%,-50%);
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                background: rgba(255,122,122,0.80);
+            }
+        }
+        div + div {
+            margin-left: 30px;
+        }
+    }
+    .control-screen-right {
+        position: absolute;
+        right: 4.16vw;
+        top: 10.7vh;
+        .laptop-wrapper {
+            margin-bottom: 5.3vh;
+            p {
+                padding: 1vh 10px;
+                position: relative;
+                background: #6a7077;
+                border-radius: 4px;
+                display: inline-block;
+                &:after {
+                    content: "";
+                    width: 6px;
+                    height: 6px;
+                    border: 1px solid #6a7077;
+                    border-left-width: 0;
+                    border-bottom-width: 0;
+                    transform: translate(0,-50%) rotate(45deg);
+                    position: absolute;
+                    right: -4px;
+                    top: 50%;
+                    background: #6a7077;
+                    display: inline-block;
+                    border-radius: 3px;
+                }
+            }
+            .laptop {
+                margin-left: 25px;
+                width: 7vh;
+                max-height: 6vh;
+                object-fit: contain;
+            }
+        }
+        .addfriend {
+            height: 7vh;
+            width: 7vh;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.10);
+            position: relative;
+            margin-left: auto;
+            img {
+                width: 5vh;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .addfriend + .addfriend {
+            margin-top: 3vh;
+        }
+    }
+}
+
+
+// 邀请码投屏
+.invite-code {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    color: #fff;
+    position: relative;
+    .invite-code-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        .num {
+            margin-top: 10px;
+        }
+    }
+    .invite-code-bottom {
+        background: rgba(42,51,61,0.40);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 30px;
+        @include flexRow();
+        @include flexJustBetween();
+        @include flexAlignCenter();
+    }
+    .video-wrapper {
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        width: 25vw;
+        height: 25vh;
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

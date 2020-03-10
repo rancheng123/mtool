@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>梦想加办公助手升级</title>
+    <style type="text/css">
+        html {
+            color: #7D7D7D;
+            font-family: Helvetica Neue,PingFang SC,Helvetica,Arial,Hiragino Sans GB,Microsoft Yahei,STHeiti,sans-serif;
+            font-size: 14px;
+            background: #44434C;
+            margin: 10px;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        .title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            background: #2D2C34;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 45px;
+        }
+
+        .split-line {
+            width: 200%;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #44464A;
+            margin: 20px 0 20px -50%;
+        }
+
+        .mxj-btn {
+            padding: 0 15px;
+            cursor: pointer;
+            color: #ACACAC;
+            font-size: 12px;
+            letter-spacing: 0.49px;
+            border: 0px solid #44464A;
+            border-radius: 20px;
+            background: #343339;
+            line-height: 30px;
+            min-width: 105px;
+        }
+
+        .mxj-btn:hover {
+            text-shadow: 0 0 0 #3940FF;
+            filter:grayscale(20%);
+            filter:brightness(90%);
+        }
+
+        .mxj-btn-primary {
+            text-shadow: 0 2px 2px #3940FF;
+            background-image: linear-gradient(to right, #54B4FF 0%, #7D6BFF 100% );
+            color: white;
+        }
+
+        .mxj-btn-gray {
+            color: white;
+        }
+
+        .release-notes {
+            height: 230px;
+            background: #343339;
+            border: 1px solid #3f3f3f;
+            border-radius: 10px;
+            overflow-y: auto;
+            overflow-x: auto;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .left-col {
+            float: left;
+            min-width: 75px;
+        }
+
+        .left-col img {
+            width: 68px;
+            height: 68px;
+            padding: 5px 15px 0 0;
+        }
+
+        .right-col {
+            padding: 0 30px 0 90px;
+        }
+
+        .release-note-title {
+            padding: 15px 0 10px 0;
+            color: #ffffff;
+        }
+
+        .bolder-font {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        .bold-font {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 25px 0 0 0;
+        }
+
+        .header-close-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 35px;
+            z-index: 99999;
+        }
+
+        .btn-wrapper:hover img:first-child,
+        .btn-wrapper:focus img:first-child {
+            display: none;
+        }
+
+        .btn-wrapper:hover img:nth-child(2),
+        .btn-wrapper:focus img:nth-child(2) {
+            display: inline !important;
+        }
+
+        .btn-wrapper>div {
+            -webkit-app-region: no-drag;
+            padding: 10px 4px;
+            display: inline-block;
+        }
+
+        .btn-wrapper>div:first-child {
+            margin-left: 10px;
+        }
+
+        .btn-wrapper .btn-icon:active img:first-child {
+            display: none;
+        }
+
+        .btn-wrapper .btn-icon:active img:nth-child(2) {
+            display: none !important;
+        }
+
+        .btn-wrapper .btn-icon:active img:nth-child(3) {
+            display: inline !important;
+        }
+
+        .btn-wrapper .close-icon {
+            width: 1.3vh;
+            height: 1.3vh;
+            min-height: 14px;
+            min-width: 14px;
+        }
+
+        .drag-area {
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-app-region: drag;
+        }
+
+        .scroll::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: transparent;
+        }
+
+        .scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .scroll::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.40);
+        }
+
+        #content {
+            margin-top: 50px;
+        }
+
+        #noUpdateDiv,
+        #updateInfoDiv,
+        #updateErrorDiv,
+        #updateDownloadingDiv {
+            display: none;
+        }
+
+        #checkingUpdateDiv {
+            display: block;
+        }
+
+        #progress {
+            position: relative;
+            width: 100%;
+            border: 0px solid #2C2F34;
+            border-radius: 10px;
+            background-color: #2C2F34;
+            margin: 15px 0;
+        }
+
+        #progressContainer {
+            vertical-align: middle;
+            display: inline-block;
+            width: 410px;
+        }
+
+        #progressBar {
+            width: 2%;
+            height: 10px;
+            border: 0px solid #0490fc;
+            border-radius: 10px;
+            background-image: linear-gradient(-172deg, #56B2FF 0%, #7A6CFF 100%);
+        }
+
+
+        #downloadingLable {
+            padding: 20px 0 0 0;
+        }
+
+        #downloadingSizeLabel {
+            padding: 10px 0 0 0;
+        }
+
+        #btnDownloading {
+            margin: 0 0 0 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #checkingUpdateLabel,
+        #noUpdateLabel,
+        #updateErrorLabel {
+            line-height: 80px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #btnCancleUpdate {
+            margin-left: 10px;
+        }
+
+        #updateErrorLabel {
+            color: #EF898C;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title drag-area">梦想加办公助手升级</div>
+    <div class="header-close-area">
+        <div class="btn-wrapper">
+            <div id="btnCloseWin" class="close-btn btn-red">
+                <img class="close-icon" src="static/img/top_delete.png">
+                <img class="close-icon" src="static/img/top_delete_pre.png" style="display: none;">
+                <img class="close-icon" src="static/img/top_delete_click.png" style="display: none;">
+            </div>
+            <div id="btnMinWin" class="btn-icon btn-yellow">
+                <img class="close-icon" src="static/img/top_narrow.png">
+                <img class="close-icon" src="static/img/top_narrow_pre.png" style="display: none;">
+                <img class="close-icon" src="static/img/top_narrow_click.png" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="left-col">
+            <img src="static/img/update-logo.png" alt="logo">
+        </div>
+        <div id="checkingUpdateDiv">
+            <div id="checkingUpdateLabel">请稍后，正在努力检查更新中......</div>
+            <div style="float:right">
+                <button id="btnCloseOnCheckingUpdate" class="mxj-btn mxj-btn-primary">关闭</button>
+            </div>
+        </div>
+        <div id="updateInfoDiv" class="right-col">
+            <div class="bolder-font">梦想加办公助手新版本已发布！</div>
+            <div id="txtVersionChange">当前版本 xxx ---- 新版本 xxx 已发布，是否要进行下载更新？</div>
+            <div class="release-note-title">更新日志:</div>
+            <p class="release-notes scroll" id="txtReleaseNotes">
+            </p>
+            <hr class="split-line"/>
+            <div>
+                <button class="mxj-btn" id="btnIgnoreUpdate">跳过此版本</button>
+                <button class="mxj-btn" id="btnCancleUpdate">稍后提醒</button>
+                <div style="float: right;">
+                    <button class="mxj-btn mxj-btn-primary" id="btnStartUpdate">下载升级</button>
+                </div>
+            </div>
+        </div>
+        <div id="noUpdateDiv">
+            <div id="noUpdateLabel">您的梦想加办公助手已经是最新版</div>
+            <div style="float:right">
+                <button id="btnCloseOnNoUpdate" class="mxj-btn mxj-btn-primary">关闭</button>
+            </div>
+        </div>
+        <div id="updateDownloadingDiv" class="right-col">
+            <div id="downloadingLable" class="bold-font">新版本 xxx 下载进行中...</div>
+            <div id="progressContainer">
+                <div id="progress">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+            <button id="btnDownloading" class="mxj-btn">取消下载</button>
+            <div>
+                <div id="downloadingSizeLabel" class="bold-font">0MB/0MB</div>
+            </div>
+        </div>
+        <div id="updateErrorDiv" class="right-col">
+            <div id="updateErrorLabel">升级出错啦，您可以选择过会儿再试试哦</div>
+            <div style="float:right">
+                <button id="btnCloseOnError" class="mxj-btn mxj-btn-primary">关闭</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const { remote, ipcRenderer } = require('electron')
+        const updater = remote.require('./app/app-updater')
+        const logger = remote.require('./app/logger')
+        const os = remote.require('os')
+        elemById('btnIgnoreUpdate').onclick = () => {
+            updater.ignoreUpdate()
+            window.close()
+        }
+
+        elemById('btnStartUpdate').onclick = () => {
+            updater.startDownloadUpdate()
+            switchState('downloading')
+        }
+
+        elemById('btnCancleUpdate').onclick = () => {
+            window.close()
+        }
+
+        elemById('btnDownloading').onclick = () => {
+            let text = elemById('btnDownloading').innerText
+            if (text === '取消下载') {
+                updater.cancelDownload()
+                window.close()
+
+            } else if (text === '重启安装更新') {
+                updater.quitAndInstall()
+            }
+        }
+
+        elemById('btnCloseOnError').onclick = () => { window.close() }
+        elemById('btnCloseOnNoUpdate').onclick = () => { window.close() }
+        elemById('btnCloseOnCheckingUpdate').onclick = () => { window.close() }
+        elemById('btnCloseWin').onclick = () => { window.close() }
+        elemById('btnMinWin').onclick = () => { remote.getCurrentWindow().minimize() }
+
+        let currentVersion = updater.version()
+
+        ipcRenderer.on('update-downloading-progress', (evt, progressInfo) => {
+            if (progressInfo) {
+                let transferred = Number(progressInfo.transferred / 1000 / 1000).toFixed(2)
+                let total = Number(progressInfo.total / 1000 / 1000).toFixed(2)
+                let percent = progressInfo.percent
+                let platform = os.platform()
+
+                if (platform === 'win32' && percent >= 90) {
+                    elemById('downloadingSizeLabel').innerText = '正在下载新版文件, 请稍候......'
+                    percent = 90
+                } else {
+                    elemById('downloadingSizeLabel').innerText = transferred + 'MB / ' + total + 'MB'
+                }
+
+                elemById('progressBar').style.width = percent + '%'
+            }
+        })
+
+        ipcRenderer.on('update-downloaded', (event, updaterData) => {
+            switchState('update-downloaded', updaterData)
+        })
+
+        ipcRenderer.on('update-error', () => {
+            switchState('error')
+        })
+
+        ipcRenderer.on('update-available', () => {
+            getUpdateInfo()
+        })
+
+        ipcRenderer.on('update-not-available', () => {
+            switchState('noUpdate')
+        })
+
+        getUpdateInfo()
+
+        function getUpdateInfo() {
+            let updaterData = updater.getStates()
+            let updateInfo = updaterData.updateInfo
+            if (updateInfo) {
+                let releaseNotesHtml = updaterData.releaseNotesHtml
+                let newVersion = updateInfo.version
+                let totalSize = updateInfo.size
+
+                elemById('txtReleaseNotes').innerHTML = releaseNotesHtml
+                elemById('txtVersionChange').innerText = '当前版本 ' + currentVersion + ' ---- 新版本 ' + newVersion + ' 已发布，是否要进行下载更新？'
+                elemById('downloadingLable').innerText = '新版本 ' + newVersion + ' 下载进行中...'
+                if (updaterData.isForceUpdate) {
+                    elemById('btnIgnoreUpdate').style.display = 'none'
+                    elemById('btnCancleUpdate').style.display = 'none'
+                    elemById('btnCloseWin').style.display = 'none'
+                    elemById('btnMinWin').style.display = 'none'
+                }
+
+                if (updaterData.isUpdateDownloaded) {
+                    switchState('update-downloaded', updaterData)
+                } else if (updaterData.isUpdateDownloading) {
+                    switchState('downloading', updaterData)
+                } else if(!!newVersion) {
+                    switchState('hasUpdate', updaterData)
+                }
+            }
+        }
+
+        function switchState(state, updaterData) {
+            logger.debug('swith state: ' + state)
+            let updateDownloadingDiv = elemById('updateDownloadingDiv')
+            let updateInfoDiv = elemById('updateInfoDiv')
+            let updateErrorDiv = elemById('updateErrorDiv')
+            let checkingUpdateDiv = elemById('checkingUpdateDiv')
+            let noUpdateDiv = elemById('noUpdateDiv')
+            if (state === 'noUpdate') {
+                updateDownloadingDiv.style.display = 'none'
+                updateInfoDiv.style.display = 'none'
+                updateErrorDiv.style.display = 'none'
+                checkingUpdateDiv.style.display = 'none'
+                noUpdateDiv.style.display = 'block'
+
+                remote.getCurrentWindow().setSize(720, 210)
+            } else if (state === 'downloading') {
+                updateDownloadingDiv.style.display = 'block'
+                updateInfoDiv.style.display = 'none'
+                updateErrorDiv.style.display = 'none'
+                checkingUpdateDiv.style.display = 'none'
+                noUpdateDiv.style.display = 'none'
+
+                elemById('btnDownloading').innerText = '取消下载'
+                remote.getCurrentWindow().setSize(720, 210)
+            } else if (state === 'update-downloaded') {
+                switchState('downloading')
+
+                elemById('progressBar').style.width = '100%'
+                elemById('downloadingLable').innerText = '新版本 ' + updaterData.updateInfo.version + ' 下载完成'
+                let elem = elemById('btnDownloading')
+                let label = elemById('downloadingSizeLabel')
+                label.innerText = '温馨提示: 重启会中断进行中的“本地投影”或“视频会议”'
+                elem.innerText = '重启安装更新'
+                elem.classList.add('mxj-btn-primary')
+            } else if (state === 'error') {
+                updateDownloadingDiv.style.display = 'none'
+                updateInfoDiv.style.display = 'none'
+                updateErrorDiv.style.display = 'block'
+                checkingUpdateDiv.style.display = 'none'
+                noUpdateDiv.style.display = 'none'
+
+                remote.getCurrentWindow().setSize(720, 210)
+            } else if (state === 'hasUpdate') {
+                updateDownloadingDiv.style.display = 'none'
+                updateInfoDiv.style.display = 'block'
+                updateErrorDiv.style.display = 'none'
+                checkingUpdateDiv.style.display = 'none'
+                noUpdateDiv.style.display = 'none'
+
+                remote.getCurrentWindow().setSize(720, 510)
+                remote.getCurrentWindow().center()
+            }
+        }
+
+        function elemById(id) {
+            return document.getElementById(id)
+        }
+    </script>
+</body>
+
+</html>

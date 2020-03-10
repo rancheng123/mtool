@@ -1,0 +1,33 @@
+.layout-normal {
+    .virtual-scroller {
+        position: absolute;
+        z-index: 2;
+        bottom: 120px;
+        width: 500px;
+        height: 15px;
+        margin-left: -250px;
+        left: 50%;
+        overflow-x: auto;
+        overflow-y: auto;
+        &::-webkit-scrollbar-track {
+            border-radius: 5px;
+            background-color: #3F3F4C;
+        }
+        &::-webkit-scrollbar {
+            height: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: #B5B5B5;
+        }
+        .virtual-scroller-inside-div {
+            overflow: hidden;
+            height: 5px;
+        }
+    }
+}
+.layout-fullscreen {
+    .virtual-scroller {
+        display: none;
+    }
+}

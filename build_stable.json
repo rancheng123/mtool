@@ -1,0 +1,9 @@
+{
+    "autoUpdate": true,
+    "clickUpdate": true,
+    "version": "5.8.2",
+    "describe": [
+        "a new 5.8.2 version  fixedPrintDeductPointBug"
+    ],
+    "forceUpdate": false
+}

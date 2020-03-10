@@ -1,0 +1,23 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "name": "Tom",
+      "age": 20,
+      "birthday": "2004-10-20T04:06:19.106Z",
+      "colour_of_skin": "white and black"
+    },
+    {
+      "name": "Schumacher",
+      "age": 22,
+      "birthday": "2004-10-20T04:06:19.106Z",
+      "colour_of_skin": "black"
+    },
+    {
+      "name": "Kimi",
+      "age": 13,
+      "birthday": "2004-10-20T04:06:19.106Z",
+      "colour_of_skin": "black"
+    }
+  ]
+}

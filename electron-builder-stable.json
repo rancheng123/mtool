@@ -1,0 +1,61 @@
+{
+    "productName": "mTool",
+    "appId": "com.mxj360.mTool",
+    "electronVersion": "2.0.17",
+    "directories": {
+        "buildResources": "build",
+        "output": "stable-release",
+        "app": "dist"
+    },
+    "extraResources": [
+        "./extraResources/${os}/${arch}/**/*",
+        "./extraResources/${os}/common/**/*"
+    ],
+    "asar": false,
+    "artifactName": "${productName}-${version}-${arch}.${ext}",
+    "dmg": {
+        "window": {
+            "width": 550,
+            "height": 320
+        },
+        "contents": [
+            {
+                "x": 130,
+                "y": 180
+            },
+            {
+                "x": 410,
+                "y": 180,
+                "type": "link",
+                "path": "/Applications"
+            }
+        ]
+    },
+    "win": {
+        "target": [
+            {
+                "target": "nsis",
+                "arch": [
+                    "x64",
+                    "ia32"
+                ]
+            }
+        ]
+    },
+    "squirrelWindows": {
+        "iconUrl": "https://s3.cn-north-1.amazonaws.com.cn/mtool/icon.ico",
+        "msi": false
+    },
+    "nsis": {
+        "perMachine": true,
+        "artifactName": "${productName}-setup-${version}.${ext}",
+        "installerLanguages": "zh_CN"
+    },
+    "publish": {
+        "provider": "s3",
+        "bucket": "mtool",
+        "region": "cn-north-1",
+        "endpoint": "https://s3.cn-north-1.amazonaws.com.cn",
+        "path": "stable-releases/${os}"
+    }
+}

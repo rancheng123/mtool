@@ -1,0 +1,916 @@
+@import "vars.scss";
+@import "animate.scss";
+@font-face {
+    font-family: ".PingFang SC";
+    src: url('~assets/fonts/pingfang.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-ExtraLight";
+    src: url('~assets/fonts/Montserrat-ExtraLight.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: Helvetica Neue,PingFang SC,Helvetica,Arial,Hiragino Sans GB,Microsoft Yahei,STHeiti,sans-serif;
+}
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: $font-dark;
+    width: 100%;
+    height: 100%;
+    background: #44434C;
+    overflow: hidden;
+}
+
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    font-family: '.PingFang SC';
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    -webkit-user-drag: none;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+    outline: inherit;
+}
+
+::-webkit-scrollbar-track {
+    // -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.40); //scroll背景区域阴影
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 4px; // background-color: transparent;
+}
+// scrollbar 滚动条的样式
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px; // -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.40);
+    background-color: rgba(255, 255, 255, 0.40);
+}
+/***** Links *****/
+a {
+    color: $font-dark;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+a:not[rol="button"]:active,
+a:not[rol="button"]:focus,
+a:not[rol="button"]:hover {
+    color: $second-color;
+}
+
+button:active,
+button:hover {
+    outline: none;
+}
+// 取消input 不是checkbox 的浏览器默认样式
+input:not([type="checkbox"]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+}
+
+input[type="text"] {
+    &.error {
+        border-color: #D76F71!important;
+    }
+    &::-webkit-input-placeholder {
+        color: #aaa !important;
+    }
+}
+
+.errors {
+    position: relative;
+
+    .error-tip {
+        color: #D76F71;
+        font-size: 2.3rem;
+        text-align: left;
+        position: absolute;
+        bottom: 5px;
+    }
+}
+// 取消button的浏览器默认样式
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    text-align: center;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    line-height: inherit;
+}
+
+textarea {
+    // Textareas should really only resize vertically so they don't break their (horizontal) containers.
+    resize: vertical;
+}
+/*****************  header ********************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 15px;
+}
+
+h5 {
+    font-size: 13px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+.font12px {
+    font-size: 12px !important;
+}
+
+.font14px {
+    font-size: 14px !important;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.font18 {
+    font-size: 18px;
+}
+/*****************  Global Classes ********************************/
+.font-gray {
+    color: $font-gray;
+}
+
+.screen-code-input {
+    background: rgba(0,0,0,0.10);
+    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15), inset 0 -1px 1px 0 rgba(255,255,255,0.10);
+    border-radius: 50px;
+}
+
+.onepx {
+    width: 1px;
+    height: 1px;
+    min-width: 1px;
+    max-width: 1px;
+    min-height: 1px;
+    max-height: 1px;
+    overflow: hidden;
+}
+
+.clear {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    border-bottom: 1px solid;
+}
+
+.highlight {
+    background: #ffc;
+}
+
+.img-left {
+    float: left;
+    margin: 4px 10px 4px 0;
+}
+
+.img-right {
+    float: right;
+    margin: 4px 0 4px 10px;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.noindent {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.nobullet {
+    list-style: none;
+    list-style-image: none;
+}
+
+.overflowY {
+    overflow-y: auto;
+}
+// button
+.btn {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    font-weight: normal;
+    padding: 10px 24px;
+
+    &.disabled {
+        background: $disabled-color;
+        color: $font-white;
+    }
+}
+
+.btn-primary {
+    font-size: 2rem;
+    background: $primary-color;
+    color: $font-white;
+
+    &:active,
+    &:focus,
+    &:hover {
+        opacity: 0.9;
+        outline: none;
+    }
+
+    &:disabled {
+        background: rgba(255, 255, 255, 0.10);
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.2);
+        cursor: not-allowed;
+    }
+}
+
+.btn-small {
+    padding: $btn-padding-col $btn-padding-small-row;
+    @include border-radius($btn-ridus);
+}
+
+.btn-big {
+    padding: $btn-padding-col $btn-padding-row;
+    @include border-radius($btn-ridus);
+}
+
+.btn-red {
+    display: block;
+    text-align: center;
+    color: $primary-color;
+
+    .close-icon {
+        width: 14px;
+        @include border-radius(50%);
+        height: 14px;
+    }
+}
+
+.btn-yellow {
+    display: block;
+    text-align: center;
+    color: $primary-color;
+
+    .minmize-icon {
+        width: 14px;
+        @include border-radius(50%);
+        height: 14px;
+    }
+}
+
+.btn-green {
+    display: block;
+    text-align: center;
+    color: #499A6F;
+    position: relative;
+
+    .minmize-icon {
+        width: 14px;
+        @include border-radius(50%);
+        height: 14px;
+    }
+
+    &:active {}
+}
+
+.btn-blue {
+    background: $btn-blue;
+    border: 1px solid $border-blue;
+    text-align: center;
+    color: $font-white;
+}
+
+.btn-gray {
+    background: $btn-gray;
+    text-align: center;
+    color: $font-white;
+    padding: 5px 30px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.btn-transparent {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin: 0 auto;
+    color: #fff;
+    transition: all ease 0.3s;
+    width: 5.2vw;
+    min-width: 50px;
+
+    &:active,
+    &:focus,
+    &:hover {
+        background: rgba(255, 122, 122, 0.60);
+        span:nth-child(2) {
+            display: inline !important;
+        }
+        span:first-child {
+            display: none;
+        }
+    }
+}
+
+.btn-transparent-disabled {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin: 0 auto;
+    color: #fff;
+    transition: all ease 0.3s;
+    width: 5.2vw;
+    min-width: 50px;
+
+    &:active,
+    &:focus,
+    &:hover {
+        cursor:default;
+        span:nth-child(2) {
+            display: inline !important;
+
+        }
+        span:first-child {
+            display: none;
+        }
+    }
+}
+
+/*****************  文字过长省略号显示 ********************************/
+.text-ellipsis {
+    text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*****************  flex ********************************/
+.flexRow {
+    @include flexRow();
+}
+
+.flexColumn {
+    @include flexColumn();
+}
+
+.flexNum1 {
+    @include flexNum();
+}
+
+.flexJustStart {
+    @include flexJustStart();
+}
+
+.flexJustCenter {
+    @include flexJustCenter();
+}
+
+.flexJustBetween {
+    @include flexJustBetween();
+}
+
+.flexAlignStart {
+    @include flexAlignStart();
+}
+
+.flexAlignCenter {
+    @include flexAlignCenter();
+}
+
+.flexAlignStretch {
+    @include flexAlignStretch();
+}
+
+.flexAlignEnd {
+    @include flexAlignEnd();
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/*****************  向下的箭头 ********************************/
+.icon {
+    padding-left: 10px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    &.icon-projector {
+        background: url('~assets/img/icon_a.png') no-repeat;
+    }
+
+    &.icon-printer {
+        background: url('~assets/img/icon_b.png') no-repeat;
+    }
+
+    &.icon-about {
+        background: url('~assets/img/a_icon.png') no-repeat;
+
+        &:hover {
+            background-image: url('~assets/img/a_h_icon.png');
+        }
+    }
+
+    &.icon-setting {
+        background: url('~assets/img/s_icon.png') no-repeat;
+
+        &:hover {
+            background-image: url('~assets/img/s_h_icon.png');
+        }
+    }
+
+    &.icon-close {
+        background: url('~assets/img/home_icon_close.png') no-repeat;
+    }
+
+    &.icon-logout {
+        background: url('~assets/img/icon_e.png') no-repeat;
+        width: 12.3px;
+        height: 13.3px;
+        background-size: 12.3px 13.3px;
+    }
+
+    &.icon-mac {
+        background: url('~assets/img/icon_apple.png') no-repeat;
+        width: 11.6px;
+        height: 13.5px;
+        background-size: 11.6px 13.5px;
+    }
+
+    &.icon-windows {
+        background: url('~assets/img/icon_windows.png') no-repeat;
+        width: 13px;
+        height: 13px;
+        background-size: 13px 13px;
+    }
+
+    &.icon-home {
+        background: url('~assets/img/icon_house.png') no-repeat;
+        width: 18px;
+        height: 16px;
+        background-size: 18px 16px;
+    }
+
+    &.icon15 {
+        width: 15px;
+        height: 15px;
+        background-size: 15px;
+    }
+
+    &.icon18 {
+        width: 18px;
+        height: 18px;
+        background-size: 18px 18px;
+    }
+
+    &.icon20 {
+        width: 20px;
+        height: 20px;
+        background-size: 20px 20px;
+    }
+
+    &.icon30 {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+}
+// space
+.margin-top30 {
+    margin-top: 30px;
+}
+// 新UI改版,除了top-header和 login页面,其他页面的内容都是用position定位的
+.content-position {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    @include border-box();
+}
+// 新UI 中白色部分
+.page-wrapper {
+    width: 26vw;
+    min-width: 340px;
+    min-height: 380px;
+    padding: 30px 15px;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    background: #fff;
+    position: relative;
+    box-sizing: border-box;
+}
+// error message  / info message
+.app-error-msg,
+.app-info-msg {
+    background: rgba(82, 90, 102, 1) !important;
+    min-height: auto !important;
+    padding: 10px;
+}
+// 返回箭头
+.arrowLeft {
+    color: #fff;
+    border: 1px solid transparent;
+    border-left-color: currentColor;
+    border-top-color: currentColor;
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    border-top-left-radius: 2px;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.go-back {
+    position: absolute;
+    top: 2.5vh;
+    left: 3.5vw;
+    font-size: 2rem;
+    cursor: pointer;
+
+    span {
+        vertical-align: middle;
+    }
+}
+/*****************  scroll 样式 ********************************/
+.scroll {
+    &::-webkit-scrollbar-track {
+        // -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.40); //scroll背景区域阴影
+        border-radius: 10px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px; // background-color: transparent;
+    }
+    // scrollbar 滚动条的样式
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px; // -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.40);
+        background-color: #D8D8D8;
+    }
+}
+// font-size 根据屏幕宽度定
+.font-12 {
+    font-size: 1.2rem;
+}
+
+.font-13 {
+    font-size: 1.3rem;
+}
+
+.font-14 {
+    font-size: 1.4rem;
+}
+
+.font-15 {
+    font-size: 1.5rem;
+}
+
+.font-18 {
+    font-size: 1.8rem;
+}
+
+.font-20 {
+    font-size: 2rem;
+}
+
+.font-22 {
+    font-size: 2.2rem;
+}
+
+.font-24 {
+    font-size: 2.4rem;
+}
+
+.font-26 {
+    font-size: 2.6rem;
+}
+
+.font-30 {
+    font-size: 3rem;
+}
+
+.font-50 {
+    font-size: 5rem;
+}
+
+.hidden {
+    display: none;
+}
+/*
+局错误弹窗
+http://element.eleme.io/#/zh-CN/component/message
+*/
+.el-message {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+    min-width: 300px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    transition: opacity 0.3s, transform 0.4s;
+    overflow: hidden;
+
+    &.mt-message {
+        background-color: #D76F71;
+        left: 0;
+        top: 60px;
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+
+        img {
+            display: none;
+        }
+
+        .el-message__group {
+            display: block;
+            text-align: center;
+
+            p {
+                color: #D8D8D8;
+                text-align: center;
+            }
+        }
+        &.fullscreenmode{
+            top: 0px;
+        }
+    }
+}
+
+.el-message .el-icon-circle-check {
+    color: #13ce66;
+}
+
+.el-message .el-icon-circle-cross {
+    color: #ff4949;
+}
+
+.el-message .el-icon-information {
+    color: #50bfff;
+}
+
+.el-message .el-icon-warning {
+    color: #f7ba2a;
+}
+
+.el-message__group {
+    margin-left: 38px;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.el-message__group p {
+    font-size: 14px;
+    margin: 0 34px 0 0;
+    white-space: nowrap;
+    color: rgb(131, 139, 165);
+    text-align: justify;
+}
+
+.el-message__group.is-with-icon {
+    margin-left: 0;
+}
+
+.el-message__img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.el-message__icon {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.el-message__closeBtn {
+    top: 3px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    color: rgb(191, 199, 217);
+    font-size: 14px;
+}
+
+.el-message__closeBtn:hover {
+    color: rgb(151, 161, 190);
+}
+
+.el-message-fade-enter,
+.el-message-fade-leave-active {
+    opacity: 0;
+    -ms-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+}
+
+.el-tooltip__popper.is-dark {
+    margin-top: 20px;
+    background: #201F26 !important;
+    color: #fff !important;
+    .popper__arrow {
+        &:after {
+            border-bottom-color: #201F26 !important;
+        }
+    }
+}
+
+.el-tooltip__popper___marginTop18px {
+    margin-top: 18px !important;
+}
+
+.allow-user-select {
+    user-select: initial;
+}
+
+/**
+**/
+@media screen and (min-width: 1921px) {
+    html {
+        // font-size: 125%;
+    }
+}
+@media screen and (max-width: 1920px) {
+    html {
+        font-size: 35%;
+    }
+}
+@media screen and (max-width: 1600px) {
+    html {
+        font-size: 35%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 35%;
+    }
+}
+// @media screen and (max-width: 1200px) {
+//     html {
+//         // font-size: calc(80% + 5 * (100vw - 1200px) / 1200);
+//         font-size: 60%;
+//     }
+// }
+// @media screen and (max-width: 787px) {
+//     html {
+//         font-size: calc(80% + 5 * (100vw - 787px) / 787);
+//     }
+// }

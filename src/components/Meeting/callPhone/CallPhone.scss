@@ -1,0 +1,234 @@
+.sip-wrap.call-phone {
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.4);
+  .sip-panel {
+    background: #17171b;
+    font-size: 12px;
+    color: #C1C1C3;
+    margin-top: 60px;
+    height: calc(100% - 140px);
+
+    &-wrap {
+      width: 370px;
+      background: transparent;
+      margin: 0px auto;
+      padding-top: 63px;
+    }
+
+      .tip {
+          text-align: center;
+          margin-bottom: 30px;
+          margin-top: 20px;
+          opacity: 0.7;
+          font-size: 16px;
+          color: #FFFFFF;
+          letter-spacing: 0.3px;
+          width: 360px;
+      }
+
+      span.close {
+          position: absolute;
+          right: 17.3px;
+          top: 75.3px;
+
+          &:hover {
+              cursor: pointer;
+          }
+
+          img {
+              width: 14.8px;
+              height: 14.8px;
+          }
+      }
+  }
+
+  .form-ctl {
+      background: #5D5D69;
+      border-radius: 2px;
+      margin-top: 15px;
+      padding: 12px 15px;
+      position: relative;
+      height: 44px;
+      width: 360px;
+
+      label {
+          white-space: nowrap;
+      }
+
+
+
+      &.phone {
+          padding: 0;
+
+          input {
+              background: none;
+              border: none;
+              padding: 12px 4px 12px 20px;
+              width: calc(100% - 80px);
+              height: 100%;
+              font-size: 10px;
+              color: #E0E0E0;
+              letter-spacing: 0.25px;
+
+          }
+
+          &.error {
+              background: rgba(249, 60, 60, 0.26);
+          }
+      }
+
+  }
+  button {
+      position: absolute;
+      background: linear-gradient(to right, #54B4FF 0%,#7D6BFF 100% );
+      color: #FFFFFF;
+      border-radius: 2px;
+      right: 5px;
+      top: 5px;
+      padding: 0 20px;
+      text-align: center;
+      height: 34px;
+      font-size: 10px;
+      cursor: pointer;
+      &:hover {
+          -webkit-filter:grayscale(20%);
+          -webkit-filter:brightness(90%);
+          cursor:pointer;
+      }
+  }
+  .errors {
+      padding-top: 12px;
+      padding-left: 12px;
+      color: #ce4242;
+  }
+
+  .copy {
+      color: #0490FC;
+      cursor: pointer;
+      right: 10px;
+      position: absolute;
+  }
+
+  .arrow {
+      position: absolute;
+      top: -13px;
+      right: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 6px 14px 6px;
+      border-color: transparent transparent rgba(0, 0, 0, 0.40) transparent;
+
+      &:after {
+          content: ' ';
+          position: absolute;
+          top: 2px;
+          left: -6px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 6px 13px 6px;
+          border-color: transparent transparent rgba(0, 0, 0, 0.40) transparent;
+      }
+  }
+}
+.sip-wrap {
+  &-text {
+    font-size: 12px;
+    color: rgba(255,255,255,0.50);
+    letter-spacing: 0.3px;
+    padding: 10px 0 2px 20px;
+  }
+  &-phone {
+    background: #212126;
+    border: 1px solid #5D5D69;
+    border-radius: 1px;
+    &-icon {
+      cursor: pointer;
+      img {
+        width: 36px;
+        height: 36px;
+      }
+      &:hover {
+        opacity: .7;
+      }
+    }
+    &-item {
+      line-height: 32px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    &-item:hover {
+      background-image: linear-gradient(-135deg, #58B0FF 0%, #7870FF 100%);
+    }
+    &-list {
+      height: 166px;
+      overflow-y: scroll;
+      padding: 0 5px;
+
+      /*---滚动条默认显示样式--*/  
+      &::-webkit-scrollbar-thumb{  
+        background: rgba(255,255,255,0.20);
+        border-radius: 2px;
+      }
+
+      /*---滚动条大小--*/  
+      &::-webkit-scrollbar{  
+        width: 4px;  
+        height: 20px;  
+      }  
+    }
+    &-name {
+      float: left;
+      margin-left: 30px;
+    }
+    &-number {
+      float: right;
+      margin-right: 30px;
+    }
+    span.subscript {
+      text-decoration: underline;
+    }
+  }
+}
+
+.sip-old {
+  &-text {
+    font-size: 12px;
+    color: rgba(255,255,255,0.50);
+    letter-spacing: 0.3px;
+    margin: 16px 0 10px 20px;
+  }
+
+  &-displayName {
+    display: inline-block;
+    height: 14px;
+  }
+
+  &-wrap {
+    overflow: hidden;
+  }
+
+  &-item {
+    float: left;
+    width: 175px;
+    height: 44px;
+    margin: 0 10px 10px 0;
+    background: rgba(255,255,255,0.05);
+    border-radius: 1px;
+    padding: 4px 0 0 18px;
+    font-size: 12px;
+    color: #D6D6D6;
+    letter-spacing: 0.3px;
+
+    &:hover {
+      color: #FFFFFF;
+      background-image: linear-gradient(-135deg, #58B0FF 0%, #7870FF 100%);
+    }
+  }
+}

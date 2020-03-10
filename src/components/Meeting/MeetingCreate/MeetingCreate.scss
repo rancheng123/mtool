@@ -1,0 +1,27 @@
+.meeting-create {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .create-meeting-normal {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > input, button, div {
+            margin: 2px auto
+        }
+    }
+    .create-meeting-vip {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 1px solid #68717A;
+
+        > input, button, div {
+            margin: 5px auto
+        }
+    }
+}

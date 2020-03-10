@@ -1,0 +1,285 @@
+@import "../../assets/scss/vars";
+.login {
+    width: 100%;
+    margin: 60px 0 0 0;
+    height: calc(100% - 60px);
+    @include flexRow();
+    @include flexAlignCenter();
+    @include flexJustCenter();
+    overflow-y: auto;
+    .login-area {
+        position: relative;
+        .login-change {
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            cursor: pointer;
+            z-index: 1;
+
+            &-tooltip {
+                margin-right: -20px;
+            }
+
+            &-content {
+                width: 50px;
+                height: 50px;
+            }
+            &-mask {
+                width: 82px;
+                height: 40px;
+                right: 3px;
+                top: 19px;
+                position: absolute;
+                transform: rotate(45deg);
+                z-index: 2;
+            }
+            &-acount {
+                background-image: url('~assets/newimg/acount@2x.png');
+            }
+            &-qrcode {
+                background-image: url('~assets/newimg/qrcode@2x.png');
+            }
+        }
+    }
+
+    .login-wrapper {
+        .network-error {
+            width:535px;
+            height:275px;
+            color: #FFFFFF;
+            position: relative;
+            background: #4B4C56;
+            .err-msg {
+                margin-top: 100px;
+                font-size: 12px;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+            }
+            .btn-area {
+                position: absolute;
+                text-align: center;
+                margin-top: 140px;
+                width: 100%;
+                .confirm {
+                    font-size: 12px;
+                    letter-spacing: 0.3px;
+                    font-family: PingFangTC-Regular;
+                    line-height: 25px;
+                    width: 90px;
+                    height: 25px;
+                    text-align: center;
+                    border-radius: 50px;
+                    &:hover {
+                        cursor:pointer;
+                    }
+                }
+            }
+
+        }
+        .login-form {
+            width:380px;
+            height:275px;
+
+            position: relative;
+            background: #4B4C56;
+
+            .login-view-pass-content {
+                width: 280px;
+                margin-top: 30px;
+                position: absolute;
+                font-size: 2.5rem;
+                text-align: left;
+                left: 50%;
+                transform: translate(-50%);
+
+                label {
+                    font-size: 12px;
+                    color: #FFFFFF;
+                }
+                input {
+                    font-size: 16px;
+                    width: 100%;
+                    marging-top: 15px;
+                    line-height: 35px;
+                    font-family: HelveticaNeue;
+                    margin-bottom: 20px;
+                    color: #FFFFFF;
+                    background: #4B4C56;
+                    border-bottom: 1px solid #67666C;
+                    &:focus {
+                        border-color: #ffffff;
+                    }
+                }
+                .login-password {
+                    input {
+                        margin-bottom: 0;
+                    }
+                }
+                button {
+                    display: inline-block;
+                    width: 90%;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 50px;
+                    &:disabled {
+                        cursor: default;
+                    }
+                    &:hover {
+                        cursor:pointer;
+                    }
+                    font-size: 12px;
+
+                }
+                .btn-area {
+                    .confirm {
+                    }
+                }
+
+
+                .errors {
+                    color: #EF898C;
+                    height: 55px;
+                    line-height: 35px;
+                }
+
+            }
+        }
+        .login-view-qrcode {
+            width:535px;
+            height:275px;
+
+            background: #4B4C56;
+            position: relative;
+            // padding-left: 50px;
+            // padding-right: 50px;
+            .login-view-left {
+                width:217px;
+                height:275px;
+                padding-left: 50px;
+                padding-top: 54.5px;
+                position: absolute;
+                left: 0;
+                display: inline-block;
+                p {
+                    width: 160px;
+                    font-family: PingFangTC-Light;
+                    font-size: 30px;
+                    color: #FFFFFF;
+                    text-align: left;
+                    letter-spacing: 0;
+                    span {
+                        font-weight: bold;
+                        pointer:cursor;
+                    }
+                }
+
+                .divide {
+                    width: 160px;
+                    height: 1px;
+                    margin-top: 30px;
+                    margin-bottom: 40px;
+                    background: #939398;
+                }
+
+                .login-info {
+                    width: 160px;
+                    font-family: PingFangTC-Regular;
+                    font-size: 11px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    a {
+                        color: $font-blue;
+                        text-decoration:underline;
+                        cursor: pointer;
+                        &:active {
+                            opacity: 0.8;
+                        }
+                    }
+
+                }
+            }
+
+            .login-view-right {
+                width:217px;
+                height:275px;
+                display: inline-block;
+                padding-right: 50px;
+                padding-top: 50.5px;
+                position: absolute;
+                right: 0;
+                .qrcode-zone {
+                    width: 175px;
+                    height:175px;
+                    background: #FFFFFF;
+                    position: absolute;
+                    right: 50px;
+                    &>img {
+                        width:170px;
+                        height:170px;
+                    }
+
+                    #qrcode>img {
+                        position: absolute;
+                        margin: 12px 12px;
+                    }
+                }
+                .qrcode-expired {
+                    width: 175px;
+                    height:175px;
+                    background-image: url("~assets/img/sampleqrcode.png");
+                    position: absolute;
+                    right: 50px;
+                    .expired-content {
+                        width: 176px;
+                        height: 175px;
+                        background: #FFFFFF;
+                        position: absolute;
+                        opacity: 0.98;
+                        .expired-text {
+                            margin-top: 60px;
+                            font-size: 12px;
+                        }
+                        .btn-retry {
+                            font-size: 12px;
+                            letter-spacing: 0.3px;
+                            font-family: PingFangTC-Regular;
+                            line-height: 25px;
+                            width: 90px;
+                            margin-top: 10px;
+                            height: 25px;
+                            color: #FFFFFF;
+                            text-align: center;
+                            border-radius: 50px;
+                            background: linear-gradient(to right, #54B4FF 0%,#7D6BFF 100% );
+                            &:hover {
+                                -webkit-filter:grayscale(20%);
+                                -webkit-filter:brightness(90%);
+                                cursor:pointer;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        .login-switcher {
+            width:137px;
+            height:30px;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 12.5px;
+            position: relative;
+            font-size: 12px;
+            line-height: 30px;
+            &:hover {
+                cursor:pointer;
+            }
+        }
+    }
+
+
+}

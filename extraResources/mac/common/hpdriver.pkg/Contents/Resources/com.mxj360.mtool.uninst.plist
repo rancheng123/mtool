@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.mxj360.mtool.uninst</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/private/var/mtool_try_uninstall_driver.sh</string>
+    </array>
+    <key>WatchPaths</key>
+    <array>
+        <string>/Applications/mTool.app</string>
+    </array>
+	<key>UserName</key>
+	<string>root</string>
+    <key>AbandonProcessGroup</key>
+    <true/>
+</dict>
+</plist>

@@ -1,0 +1,66 @@
+# @cookie = auth_token=eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..GojhyWtM_Jj2Ianu.gwmnFIzsJ0BgKxSbpUj21u1Edt34hRS0dh8hW1uVV009CmxwOsX4p3eVsVP0G4OCYfmNYLbDiCCWV-rcgr69DXYrxgVl0xziQE3lFOvZbrERSpd6gub-UvKmXHSQfz6IqSvLewhDP4FZpmf59wlSMC95VBmXj0w1zK_o-5EKzTNae5bJ2vav72SCCEwdXn1o3vWgEw9DiVVNIM6rh6pMuDmr_EqqE0U1dIqBistC2gv90XhmBrQkBZWkpFn9wyI4K7VEpX2FyO-1EPzfrW_Or7ybqzisdhtyrvdo7lWQO9GiAjfdwmBA7uPJLkpD5X1qYWs-jM_Ssk5PwYa68rutIXinATO_h-avDpdXhX-2Ao6cMZZFvuVinXu8bCEpjGb2pwshUIkvEg.tNolVFKjlN2E0p1bVFI4qA
+@cookie = auth_token=eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..qkb8NxBkmWQHk4vq.ZUOCo6zpiOTmkiYg44dEG-MFgHFTnzdyJVRrS_4bahUDDuXwFNbVOHY1m_m3Md_H9ycFT93avKaRIW9vVsoqQOWapnNNrJ7_juMRAznkjFLZmb5r8kwWm9mN5X1PvHHdGLTWFsO1LzlfZo0ufS8cM8eH4mvVgyLOEL0waM9C1-6gQkiUXNPvwmCJ1Q7QWuXJibouc7T1lvFRFTYUYHP_mdHi9iGbKw4m7NuLdwsdyVWegCRS8OYoQrBGbaSBrMKM8F15IN6ntyLU1TnIiu-GI4-75pXY8zmlr_aLa4zK54ECeh2MoCewcts_dKWd8RKRPJ8D2r_I2he0oYXGuM2Ru-RZ_esBTWi_A7urOgflRHtvIYQ39chgWwwEYdJ17w-VwOayFxv7CDQyXXwn_W4qdVecbOpICZiuYpxf1-n_9A9ylRAgMxC0.0O38bXBHFrqvvDYMMqDU2w
+POST http://localhost:8001/api/devicebinded/virtual-rooms/222/333/equipments/action
+content-type: application/json
+
+{
+    "action": "deviceControl",
+    "data": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+
+POST http://iotup.backend.mxj360.com/rest/devices/mtool/config
+content-type: application/json
+
+{
+    "uuid": "abcdefghijk"
+}
+
+###
+POST http://qaiotbackend.mxj.mx/rest/devices/mtool/config
+
+{
+    "uuid": "abcdefghijk"
+}
+
+###
+POST http://iotup.mxj360.com/rest/devices/mtool/config
+content-type: application/json
+
+###
+https://qaso.mxj.mx/api/devicebinded/virtual-rooms/64328/64328/equipments
+Cookie: {{cookie}}
+
+###
+POST http://update.mxj360.com/rest/devices/mtool/config
+content-type: application/json
+
+###
+GET http://qaso.mxj.mx/api/devicebinded/screens/existence/64328
+Cookie: {{cookie}}
+
+###
+POST http://10.28.0.247:1127/post
+
+{
+   "time": "ww"
+}
+
+###
+GET https://qaso.mxj.mx/api/qrcode/auth/login?cacheBuster=1503988199397
+
+###
+GET https://qameeting-service.mxj.mx/permission/api/validate/1234372920000194/1/videobutton
+
+###
+POST  https://qaso.mxj.mx/api/online-meeting/screens/73718/join
+AUTH-TOKEN: eyJjdHkiOiJKV1QiLCJlb
+
+###
+GET https://qaso.mxj.mx/api/printing/quota
+Cookie: {{cookie}}
+
+###
+GET https://qaso.mxj.mx/api/user/permission/online-meeting
+Cookie: {{cookie}}

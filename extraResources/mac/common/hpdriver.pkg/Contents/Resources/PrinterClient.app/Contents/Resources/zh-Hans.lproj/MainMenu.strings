@@ -1,0 +1,21 @@
+
+/* Class = "NSMenuItem"; title = "iSecStar Printer"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "打印客户端";
+
+/* Class = "NSMenuItem"; title = "Quit NewApplication"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "退出";
+
+/* Class = "NSMenuItem"; title = "About iSecStar Printer"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "关于打印客户端";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "配置";
+
+/* Class = "NSMenu"; title = "iSecStar Printer"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "打印客户端";
+
+
+

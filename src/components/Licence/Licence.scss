@@ -1,0 +1,42 @@
+@import "../../assets/scss/vars";
+.licence {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 8.4vh 0 13vh 0;
+    box-sizing: border-box;
+    text-align: left;
+    .licence-content {
+        padding: 40px 30px;
+        width: 65%;
+        margin: 0 auto;
+        overflow: auto;
+        height: 100%;
+        .weight600 {
+            font-weight: 600;
+        }
+        .top10 {
+            margin-top: 10px;
+        }
+        .title {
+            margin: 20px 0 15px 0;
+        }
+        p.blank {
+            color: $font-dark;
+        }
+    }
+    .btn-opacity {
+        opacity: 0;
+    }
+    .licence-btn {
+        text-align: center;
+        padding: 4rem 2rem;
+        a {
+            cursor: pointer;
+            border-radius: 15px;
+            padding: 1.2rem 4.5rem;
+            letter-spacing: 2rem;
+            padding-right: 2.5rem;
+        }
+    }
+}

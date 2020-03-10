@@ -1,0 +1,492 @@
+<div id="main" class="main">
+    <div class="header fullscreenmode" style="">
+        <div class="header-close-area">
+            <div class="btn-wrapper">
+                <div class=" close-btn btn-red">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgZJREFUSA21lbFOAkEQhmeOEw4IMZKoRGJha23iQ2iijY2Vr2DlM1j5ClY2NmL0IUxotbUwmqgJxhDg1IN1/tlbAggqnjfNccv837+3OztLlHLwd3yzuzHXar5vGeptGcOrxGZJ8w0/MJsbJq9WLGVrfHL5Mokz1sDs7QXNxt0+GT4gY2YniXWc+VWMD0vl5SM+Pg5Hc78YtHc2q1EYngl4Dcl+EJBfLJKfDYj9jOpN1KXoPaSo1SLJtUzmuuRuF04v7u1APDz4Ani307kyRFXPn6GgXKaMGHwXXTEIGw3qRR8ks73P5PPrgyaeE2NZMHPA/VyOipXKj3BoMQHkQgOtMoTluH0Du+ZmDTPPzy8Qef2/XO7kp+RCAy2WVllxtu4BqqXZfLvFhhYWFn8183FuWK720yORbHyplFtBdek0UYqAY0N/WvNxYDcGLRhgKVP+UAPUOZJQLUnDMRzTGuAQwUBKMWk4hh5MgdmdjE+oq/MkJn1GzLQGSYijWqnVwbAG0lswiBOaNEw3ZsRMNUDjAhjHP2k4BpO5BssaSFfEC3pL0nAMZu8cLDVAy8XhQOPCYflrQKvNT1jKdAbaz6XlAozGRb3e9B6iUS2UwnJ3hN1kGUM/l6+ooyt2np+mMxE4NNCCoax4ikP3QRrtesgApqleOPFXUapXpjPB8z8u/UFeKr8/AevaIzXe/0FwAAAAAElFTkSuQmCC"
+                        class="close-icon">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAsdJREFUSA21lT9s01AQxu85Jk0waUsqUEtBFR1ZqVQYmDpBEWVhYeqMxMCEYGEDMTEgMXfqwkIrKqZKSAyAVMQEYxGC0grU0D+YpMHx476zzzJ2XJbmpDj2e3e/7/nevTNRj83sx7fXp4/6u+0ZS+GMteYMGXtC/K35Zoz9aMhZ8GrlBTO/9LOI01XAzs5WdhtfbpE1t8nagaJgGTdmm4Uf1uqnHpm5uVbWNyfw+9rl0aDVesbgCTi7lQq5nkduuULGLUm8DToUtFsU+D6xb8Q0ZoV9rx5++nwtGoiH0w+Ad5rNt5Zo1HEPUaVepxIL7GcdFmg1GhQGf4hXu1aqVifTIo4GIy1YOeBuXx95w8P/hSMWC4AvYhArDGYpNxGIcm4nsPLqseNEjkPL66u01W6qb+4fc/CBL2IQi9QKK/YWAVSLbCgPIi0Kv/f+Jd1886KrCOCYg4+KSCzAXBzC5FsRQCmiWrChmvOzQyN0+sggrf7ayokoHHPwgS8MsWCAJUwVQJ3DAdWiNliu0uNzF2k8I5KGYw4+8FVTRsLEhBwi3iKUYtpUBKnAam+8XuJpQ5/9bRHOwhGrjIgZp0hPqNZ5N5Exr5/BOwIf8wZyK9eYhBGf+qSK1KH4P30muSCLLDMVCXBvgT9OaNY050gLVq5vUlRdthMzYqYIoHEBjOOfNoUj/9jQJ+cv8W86t/HpGGUYsh8wHglwV8QDeotaFq4bqhufrS6NU4YxziLGRAAtl7gronGht8Deba7Tp3jlCpcJvojIZFTC8IEvDLHS/JglTB5Ldm7nytQdCuk+jjt6i55mHKJ0nQspvuAtAZ8aGScKQ/I3NqTp8bLv9i8uP4BbIiDfgM2vr9BL0Li0H6WBhfcMb/74TsHeHhPNSm3o5AUTfxsSAQT3ol3/I6AiaLl4Ezwf6AcHQFhPP5mRRHQ9iI9+mteT+7/m9bZFEyNEhwAAAABJRU5ErkJggg=="
+                        class="close-icon" style="display: none;">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABW5JREFUaAXVWl1oXEUUnpnNlnQ3bd2SJmx1LZW1P1KKlIo+SSMo2lpaH+KTFUE0D32qoM998MkHHxQEBUHQtzzUUqsSxfTRn6IEf6qwCM1SF2Ps1uym2TbdO55v9s5mdnvn/u1NshlY7r0zc85838w583NmOUsglcfHN8ub808yR44xyfaRyiL9cpLLLVDPJa/Ro0q/EuPsdyb4NM8Mf1WYnFxCeS+JxxW+euxYjsvFEwT4BGPyKSlZJoouztlNojZFhM5Lnj2/6+JFEIycIhP46/jxzJ1m7TUp5RsEvtXDxEASmiitU+UVGc5qnPO3BlJb3t554QIRC59CNyrHx1Oz9fmXmXTOkvp8+CYi1awwLs7ePzT8IZ+cbIaRDEWg/OwT98qm8yn1+uEwSnutQ6NxmafEycJn31wL0hVIoHx07FHHcc6RotXqdRvGihDiucLn09/ZKiBf+BWWnz7yguPIS1RnrcEDVh5tAwM+bMk6Ago8kx/bBNcyXzB+qvDlpU+82vQk0DIb9Lwc9BJa+zzeEIIf8TKnuwjAYZ07zR8I5HqYjV/fVMRA6pFux+7wAUyVmG36EDyI5dVMSBhNlh0EMM+v1VRpggj7DmxqLTIE2iaEFXZ5eaFEZYGm49AaWq7VWG5wkG3dtMlQF+/1drPJrtXrLD+UZYOpgSAllXR6a1Gv2O3a2B6EAk/7h3d+mmGlG/+xtBDs1EN72aGRkaBGreWVxUX23szPrNq4RZ2RZq8fPqQ6xipAHexifRN1lAlhY6b2Nj5Sumh2oabA43vZcdhHv1xhP87N6eJIT4B/lzoD4JEWbi+zy38H6wJWYIaMIuDuKtXGDJl+aTuZDXpeJ4de4pDQ4AHaTKOZEJta2kQqzCTYQqK2xKYa+ztsHmazQoGxqCRs4B+/byc7uGPY3rhZ4mLm6jBSn5sn094cZUsMs0HPA7xOIPXSgf2+PuEH/vk9D2pVvk+aeSRt3pf40Mhw6szu0aPSkS+SRHtG8pV2C/PZLBvNZtiM4t7KpA5Q38hHeXdKAryrE1jTrLn0vVDHwO6WQn5j9kGPhzGnBMGvoKMjrKDBwBk2dgpDYlXAAzFhxzpQjI3eFVTrwIHWbKR9Qjv2jeIt9vVsWU2RZjtw2LA2b8p1vRcx+mo+7SqI/GkbiXOlP1cLPDDmhA59REbsIeBFAo5tpoR6XqkEdtP/zHZiv4PEyeIDnlPa/u25JMymA5twg04dmb18wGFh8909D51/XK/G3nZ4YQJ2jECsgJKXQttso+tqx467d9J6jGcVBLCF7jnZwMNsTDtNmESJzssUq+wx2cDDYU8/fDD0YhcZBmEXCLRGFjQE/MDred5rdkpkJAi7QJQYgVa1QTKAhXkNA17rSZIEsCrMhF20Qtx8imaNSJu5KOCTJtHCyqeAveVfFOLWjYR5xgGv9SY2Ei5mRQDxeep/XEIEJhzAcYbtPklFWWGtJH69ooIFgSAIq8JMFRUBXC4gPh8oSBUQPdBnWF0/Cngt40mCbOO3f6/rKtYnsOoLkfYUjcsFkqhYpdwChD4QPdApDngt200CTrgnd48utj0rLlZV3uG4V58Ze5UuMN63Ser8aqOhogc4gIc+w2phjydiTOh5gN+9bZtHDSOLi4ldX0x/oHM6CCC0WK7/822/Rudw8VEY2vGYeXvTQQCsNnRwFwQQ/cXNCC0LDXz3R0J4nW5rPK6c2k5sAkUcngpeMfPW8x1YvO4GgMmTAApwI4KbkfUdCep5n9sZ4LzLB5Bppn6/5AskADL9fM1qNSFzFOA8mL7oEnqC8gMXO1M24jsuuifQlpfDeukKNQKm4Ib9q4FJAu8b9s8e3UTwvZ5/t/kfwpfShX/XXiYAAAAASUVORK5CYII="
+                        class="close-icon" style="display: none;">
+                </div>
+                <div class="btn-icon btn-yellow">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgZJREFUSA21lTsvBFEUx8/M7o7xfkQ8I6JVS9R6CQ2FyldQ+QwqX0GloEH0aomWVkS8NuL9GLtrxv1de9YuE4sxp3Dtyf3//vdx7hmRlMP5jn+0PddZvH+aihyZMvNGI5EB5hvRqRkOnEg2c61Nm8OTq9fk4yLW4HBn3i/lbxYkksUoitrjhJpzHOfWOC5lezqWRyZWAs3r+MXgeG1mMHgtbJjVjjHJ9wJp9h+kIRdI1i1ZXSnMykvRl8egRYKCb3MGtOdnvOmh2fUTmyj/qTEA/hwWds3KB3OZonS1XYpvwN9FYIyu7rql+Jrj7E4aXW+82sRVMcfCyoE3eC/S13VaF46WBTAXDVoYsJRbMeDMORZW3tN+Lq4T6py6I3PRoIVh76+sskdEtRQeng650N7Osx+tPM6V47q47hcu3mtpGqG67A5sKRo4F1rvzOPAmkMLg4XCJG8NynVuq0Un/3Wk4ghl6h2MkqQUk0YVwzLfd1B+oVrnSUyUoa9ed5CE+Ulb87Te78Ck6C3CC00apTBjEcrUHRyQ5fknDWWYStqHZQ3oivygtyQNZbjibMGyBrRcHgeNi8fy10ALAxbMioHt56blkqBxhZGe3M+t0KC1YVj6jaiQ6OfmYvboivnbvl+ZAEeDFgYsXZr5/RFptOsaA6xS/eDoXlL9ZKoJ43989Kt5qfz/Bn//FuEiEeXgAAAAAElFTkSuQmCC"
+                        class="close-icon">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh9JREFUSA21lT1PG0EQhufO9nHhM6AICCiKaCgoqJCo6ZGgCUUqCv5AKn4DFX+AIhUFaUKUnhqJKlJoURRhPhTxHThsc8c8K49jKydMzrkpvL7RzvPO7s7OiuRs3lP8H1/fD1avbxcSTxZ03lQiMsZ8DSrrsO8lsl3q695+O795jj/NUgUOdpbD2unFB0lkNUmSgbRA83med6mKa8Xhl+sTcx8j89v4l8DPrXfj0UPls2Y7w6QwiKQnvJGuUiRFv+bianFR7quh/I56JaqEzqegvbAQLL5Z+nToHPWfFgHgd3FlVzMfLxWqMtT/S0IFP2WRCp1dvZLqQ4m9O3zhB7PNIr4Fsy1kDrwruJfRoXJbOLEkwFxiiIUBy7gNAfacbSHz4YFj8b3Y5rQdmUsMsTDc+dWj3BZRLZWb2wMOdGTw6FmZp6myXSfnr4WDD3q7J6gutwJXigrnQNvteRrYfMTCIFGY+J1Avc5dtdjkrCMVhxnTzmAKJ6XYqTUxHLMI0G6o1fncyrdMOjsb0427YkxbQSZgelDL1RK3AnWVVXGSG0qpkUlWq8UFFwqTP7aCfT64/p2aMbSSvsNyAnRFPugtnZoxfPG+wHICtFwuB42Ly5LViIUBC2ZDwPVzbbk4aFxxYjv3fCliiHWmLHsjGiT6uR7MHl3x9HL0n0SAE0MsDFiWmn7/sTzadYsAUrk+OLaWXJ9ME2H8H49+My+X/4/mhR2WcamuRQAAAABJRU5ErkJggg=="
+                        class="close-icon" style="display: none;">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA+FJREFUaAXVWr1PFEEUnzcHyG2C8UAKJUBDQYjEQo1aKYV2Bi2k8YPCGHsLa2oK/wML/GiwUGKHBXbGqIXBEAoaJGqBgpFkOSG34/vNspfdZXdv72s/pribz/d+782bmTfzlkQL0sb8xaIy/15RwppQQo0S0QiTLSkhekCehNjhv22l1BoJWiUhl8g4+nZw6v0u2ptJTLuxtP5ivEQVa9KyrEkmcpWBG/VQYkFMFnBRSrmgCnJh+Nbydj3jnb51C/DjzRlj77f5UAj1iInYGibByoWi4yfyjuEZotmuPuPxyWufzfhU9OzG667mbxa+mcv3BNEMoz0Rb1R9vdj0frIqZoaM8Sc09bISZ3QsrW3MnR6wxL/XrOWzcYg224dn55MUR64PTn/5XotWTQE2no6dt5R61S6thwHEbEiiG4N3Vz6E9UG9jGpcnxu7XbGsd0mDBybwBG9giMIYOgMYqJT1LGpwUm1E8s7w9MrzIH6BAsBsID0P6A4alEJduSDl5SBzOiSAvWD3PqZhNlGK0WtCdJ3zL2zPGsBWae827dkmowDWaoNCNTbG6O7rEQD7fFJbpRtE3Dyw6bPINaBqQjhh97fMtayZjgurzsKUOnuNEefErs4A3IOsg4cEwGi7MrZoegbgmKn9/XWu0r6N3ZTp3x3q7ByGA6hnAF5ljsBDsz0HmO2TGC5xpvUdAM7BTLiMWOafX4JUsV6XOIBuIlVwxYWiXWkcO95h36T4MsK3i7wkW9HKAHaJa2BegPtxAjsLoEb9DXkpAzu73PoCnhfMHpzA3sE1JU+tr7C5uStWvm6JcjnWDc83uvFid3dBjJ3qFf39xSgiJTah6MMrDfBADIWBd1QC9qorEdUxy22SfQk8OoUmTCOmM+nkmFAUX2DHGsCDUl9YR9jgpYmBsOa067cle3draaNolD+wswnRaqME0h4H7CyAXEobSKP8gV3ilRgPrdpBapRSwuOAVWNm7BJP3LyfLubFE4WugBWYgV2fA3jiTliJTbNzMGsB8D7PFCPPg6Y5tpbAzgFm+0ZmBxdotrU82kmNZp2ASNWVQHABTxbtZNsK2sAIrA6tqgD6nYWDC05DZv8Zo/MmBIxVAVDQkREOLiCfxYTABzC6sbE/5E25ftyFKHj9RWSEs2WvaKmWyjpaExBy8piQAxHv8BxUuO+U0/4HlqDYAHAFCoAGREQQGeFsmjNRjorOAOehNYBKd8p1kA+CYOokR0awA7gFa2cevMAzzGzcvENNyN0JC3uoOH6Bp+tBOw870AYP8PKHktx43PmaJuTujHxuPzXwC5Lbjz38gqCc5uc2/wFawbYApc6C9wAAAABJRU5ErkJggg=="
+                        class="close-icon" style="display: none;">
+                </div>
+                <div class="btn-icon btn-green">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgRJREFUSA21VT1PwzAQvUubtkiIFvExwMSKhFiQWBiAGQR/hYnfwMRfocAMHViQWBCClaksgKAIibZpc/id7SqlFRRCTnLs2Pfecy7nM1HGxt/xr50uTcYR7RgftEUSmVN/5gfT35lWDUKqXmzdvOj8kMdQgfXz9VL0+rQXC+8TSXkILjHFjYDlIKxMH9Y2as3Egg4HBDZPluebnfhIRFbgEZQKphWJSyFxLlCQdGOSZkRxs2Va2xIxX5Xywe7Z9nVdJ9yjTwDkH1F8aXY9z/kc5SfHiYuFpP/AWFpt6ry8k3S6Zo3rY2GwmhSxWzJLCAt2DvKgGFJ+tvIjOdSwAfgCAyw4wIU1WE8AMUdYsPPc1ARx0Fuynt884asYgwUHuLy7hgjZ0m3TPX5oOFMeaeeeINkjXNFjw0xxI1egBWSXbtOmopTxQ3+KeZLw6xhYcGCjLr17IUKea7Z8Bf32HRnnzHK6l0X0SMW0luBQTvsn3Qn1eZ5GpMfhOEdPlRFVRfodrYCtLYQTmtpix+E4/RegcOnxTyuAEqJcQrfovUAVL6gtac1zMNMxuFQAJReHA4ULh+WvBqwtfqbCKqcT0BNnSi6ItXD5OP5CSQwGWBjKt78jfIgI9ZxNyUVV7D6/EQCjGnwVY7DgAJfHZl6u+wSgmumF4z8r0yvTi6D/j0s/yZfJ+BOHqBEzG/p/FQAAAABJRU5ErkJggg=="
+                        class="close-icon">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAlVJREFUSA21VT1vFDEQnfHu3h0S4hLxUZCGNBSREA0SDUVCDYIi+SFU/AYq/gItgoIDakhBg0SDELRJExoShUORcrm99eBn76x8u0tykdiRdm2P572xx+MxUcfCp/Hfe39r2eb0yNngWyOR696e+adrf7hvZDIafXrw7dDrW36tDtY/rg/y3/tPrPBTIhm24CIVjw3Ls2zpyvPtje1JNOG7DQf3391emczsGxG5Awsz6LmvTzzIiBPjQVJYkklOdnLivmkgYv4ySM3jDw+/7nlF+ZtzAPLj3H52q17hNKF0+SJxvxfbN/pyMqXZ4RHJrHBzvHchM3djJ2FJbgphwcpBbvoZpdeWziSHNywAtsAACw5wYQ5SOUDMERasPLl8idhUU8HylD9sPcZhwQEuNfchQrYUU9rBgWZXhwutXAniFuHKf42disdJj1aRXSkMQirKEAf6r5jbVztUvN6F+ZxkLzeqMbDgcAc/tDkjtV9oHDDw2VJZ1zpma5WSzRs1bXOIjCslcJaDNbRIxbpg5SqLOIk4PGfYQXlDNc+VEC3Cch4nFUfJqSGKORv98zgRmYf7QybUFpGbuKFI0zbRA0aYINo2bK0NqlCvqnuAwuWvfwMQKdp2Ek37LkoIxO3kO1oN0QgD1JazpO6kbq8czPQWcz5EKLnFlMfIX1yW+C7EeV4nq4+BDcXPVVjHiXm/A9w4lFwofOHSOEKxoIjDAAsBl74RGiJCPWdXclEVi4M/BMCiAluPcVhwgEuxnZfrOQfw2umDo9vq9MlUJ2j/x6Mf83XS/wt+sT1zBjiRwwAAAABJRU5ErkJggg=="
+                        class="close-icon" style="display: none;">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABLJJREFUaAXVWr9vFEcUfrN38g8sJ7awQXaKoGAiR47tAiICVSgSUYCAILqkihA9RapEshQqCv6DVEkF4odFKlOQCoTAhXGQTsFESUEszCGHIIezdXeb75u7We3ZO7eza59vPdLdzszOvPm+fe/dvH1zSragHLl3pHtlceVzX+RYVWRUfH9ElPSLL71avJI3qC+LUgueSEGJ3O0Z6rlz/+j9t5tdHrLSlfFfxvtlVU4B9CkR9YXv+7uSSFJK/SfizwDAtHTK9PyJ+eUk883YxAQO3j64q7S2dhECvg09YR/1ZLIUZpg51JDI5a6OjiuzJ2dBzL04L3rOP5cr3Ch8AxOZwsJD7kskGKlkESY2Nfrl6I/X1LWKy0wnApO3J9+rrFZvwVwOuQjd7BiAepTr9E7PnZx7HicrlsDErYnDlYp/s2VP3YYQ2sjl1JnHpx8/sA1hPzRmLx/fnPyqUvZ/3XbwhAQz5drEYEeInw/bTU70K9WfbPe3s1/lvK9/OzP3c9SakQS02fDJi3RFTWpDXymXV59FmdMGAnTY8lr1YVvMptmTgU/kO7xP1jt2gw/wp5K/NpkDT2L0CWAjxjDPxsZE7jx+Ki+EB2SsPvyqUHy+dHVp1uAKTKi+wy5k8ukbtLzClLBjj5gdOzAhHR60aocNA9hsHRjroYyWpDXAwKy6Kn/h6deixxSLLC38I8U/XkMEjNCUUNV0Bdf6vXxXXobHdkvvYHdwK7aC2MnrlPcZANY0gKhyM+C54J6RPtm97x0RBEvBhyBtH05CKZfK8veTYq3h+s0HTcwomgDW0A3X+bZxez/sl4EP3rXdtvaXS05xW8N8g1nxZeTN4koRqu/G0wqcumF0wsaLp8tSfPY60ayx4/vcxyMUV6Le9g71DHj6TYovIwnB0+ZtZe8BaGJ/ck3Y5G3oB1a+QBG7B1Uc2zDAoeMlCMSSSGFODksHQ4jd0++wQVeySiyJlD7hioLYPf0C7jojYpwm8bSJOZFEq8wJyQMPbtsfgStR18tnMKdmJFrlE8AODaTfvMIs20IC2INQIgwmbd2FxOD+vrTiI+fRhJjS2LJCEtwHbGXPgT7ZMhIMKWBC9tVsKGL6uYltCwlghwbUQgyeVLe3hQRTlXCCQiqEDpM0id/tCtbmhCAwbSF2D8HP3bQCXOYxxH7RjAQIDKYkQewes8Q60cpcZYuKJtHMsZMSYDCH5DCxe7UUtz+TNJhLyjXOJxLJ04GnP0Pseh+AKqYTCcDgfFdDPsBpepxPOAmpDzKYaxsZ8vNJ94PhsQGQyDeuCan6jWL9lavUP6/+/LdpFNso0NLi3kXMKFxKl7Hr49/BjH4w7UxflXz/5Oz8JWKsaQAVHi6AzmKmgRNcLa1yxeAMCDDPgsaUuZHVKzGanBAxBgTY4MkIbOoR61ksxEaMYWyBD5jOHZ3cJQlmf3kygmrJkMrAtURM6zPTxNVgQgYo8/A4VDhv2u2+EkvU2QBxRRLgDZ6I8GQE1XZqotTsdIY4N/gAO8Ml64d8sQRIJsvHrFYTCmuBzvPR2dFPEXtfaOlmh02Ka3CtKIcNYzJ1Jw2Ywbzu2L8ahEmwvmP/7LGeCNvt/LvN/6C29oxZE1ckAAAAAElFTkSuQmCC"
+                        class="close-icon" style="display: none;">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABa9JREFUaAXVWjtvXEUUPnOvvX7FxJYNxhC6gFxguwgiJFQpoCJKgpQOKhTRU6R27YI/gKigIhKJFSpTpEtIFBe2QXKR0tYSE+NA4mT9uDt835k7m1377u69+8RHunsfM3Pm+2bOvM5ZIy2Qc3fPDezkdz6xIheKIlNi7WkxMipWhlW9kWd43hZjHgUia0bkztDk0K/3zt972Wz10NWYTP8yPSq7cgmgL4mYT621g1k0GWNeiNhFAFiQPllY/Wx1O0t5nzczgTO3zwwW9va+gYLrZS1sJddrbH+PmJ5QbIh25hXgohTRL1FRDC57EIkpHIjs7VuUd/Wzh0Tm+3O5b5cuLoFYeklN4Kq9Gq79vPYVoMyh4kmtor9XZCAnMpgT68GmrNuQ1Is9kZe4CvuulJE8KM9NfT71/Q1zI0qjKhWB2duzb0e7xVswlw9UaV+v2JMDIri3RHb3xfyD4YA7BaAehn3B5eWLyxv19NclMHNr5mwU2Zva6j2B2JEh1+r1NDeSjt4wT2FBMDOwyIehubJyeeV+LVU1Cbx/c/YLGxW/g4J+gbnYsROv7LqW1mbSYFpm67k3q4IJg2u/X1n+sZrKqgRi8D+woD3RLzKKlu+kbO+IeV7QGkHiy2ok4mmiEhnNJm55ZzJNgI/2ItlafVxZQZo31KnmirzEQkxJxY4Q0AFLm4fZaMsPo/WblMe/rTdGAnUrBmDhOCS2w1AqCHCq5GyjA5ZTZBMtf7iihkkQA7Fg6iY2YizXXfkyE17DVPm1cLZ5/TXMBFWHSLmOms82srK1/Kfm2Vn/V4JcKIMTmAyyyECvGK4XRfvW1tqTjc2fNpd88VIPcIXVRQopansZFyavsN69oZ4AFj8eiJFYfT0lAro94ArLxYmraxulIRLERGzAGG9lFKES0I0Z9zYUrrAdkIZIvMJ2PcYsrgewqwSzYV2sWrU9SNEIJPFkxY2PFNnFEpsb0MPcCbOMEnBbYrxhU9Zp2by/kYmEN2+POeBhhPt57D2sT+wKiXimqls3G5lYgZnYAz1J8TDC/XybZp66oJBh8wF6IgUJxUiswEzsAahcYAU8jHRbHIn62w6PldgDzKtTBM6T1P9BNh9gYC/XJuGxEjtWCBzAIXoMbAODoDcUgyuL1CNRwgrsAQbEqCrnGbYNwt3I5MfvtJaExwrsPTr/Azj23BzabZGRd8fk5OkxKfKkFUtpl1Vrv1XK5Eu5O7GqYO0qjVxL9AkFigewtCTRAi6hRDx+ULM5pIs4w4ymlFQtv7Fqrx5+EHU6oXkANDhqq3//8RemuPVquhK/0+Ynz5+SkffGE9Ob/kisFGCn3TiHEnw2STI+OyFvfHgqKanqN7sfSf7uurZU1UzNJHiswI5BbB5RF51O1aRREkUQaYeUsNJVieGwxkroMasljsSRE12tIm1L81iJPcBguMOa1N1Xp8rx2TdhTt0n4bESe0AvsTpa4atUd18aEme7R0IxEiucw8QeOBe3XcRgNuqrrEOAyeMz6IlukaA/VZ3CdpHYdUVAVywobh6cUwpJTHyUbXZKqbp2thijx+yWNPjndT2glzh2sNbW4lLHpic6S4LYiJFrFzFDlEAcXJjnB/US8yGldJJEGbZ5HxBxPQCwDC6AWV57IIMpkWdHSBATewAYFWvcwCUCjIzgZY7fzdMdF1WJM6W5tZUEPdZ0u0OIsTyKUyLAREZGMDgeCjZw6uLmxwzSLhKKBQstsRFjOaQKAgzrMDKipsTBAhd3Vmk5CWJwAzdPbIdDTxUECJZhHUZG8FhQ//wz56PPQqRlJFB3HCMoEFNSyAm9kizHJcBRlQBpHesQk++XYx3k8ySSwqx0Aquv0mdq4m44v7crzOpxVQ1009UH13dWr57uKrk4cXPGWYbSrkC30+5+s/zVwHsPEKTr/l8Nyknw+dj+2eMwEb538+82/wFmVrc+W+3Z4QAAAABJRU5ErkJggg=="
+                        class="close-icon" style="display: none;">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABLdJREFUaAXVWr9vFEcUfrN3AmNDwpFDYGggisQhgV0QKYGOIqmC+CW6pIoi+hSpXbvIPxClSiqQAhapHEWkCkLChQEpR4RCEgk5NgcWsRwOwu7m+2Z3L3vnnbuZvds7+xX27syb975v3vzaeadkAHLy55M71pfWPwhFTgciNQnDd0RJRULZpc0rWcPzqij10BOpK5GbE5MTP9w6detFv+5hK58c//54RV7KWYA+K6I+DMNw3MWSUuofkXAeAOZku8zd++jeqkv7RNeZwIkbJ8abr159DgNfpHo4xLObLYUWSRtGSGR2bNu2LxfOLICYvVg7vRReKtW/q3+KITIDx5P2Lhw0lSxhiM3ULtS+vqqu+jYtrQhM35g+6L8MrmO4vGtjtF8dgLpT2u6dWzyz+LiXrZ4Epq5Pvef74bXCet2EENEoldT5u+fu3japsBwRM8uxa9Mf+6/Dn4YOnpAwTOmbGMwIsXyYKtkw9INvTPXDLFcl75P75xe/zfKZGQEOG4D/KquBa5n/OpDG73+7NmvTJxZiaiuMXzYQ0BOWY15kLKuBcxlm/nL9Wb8kxjgPia3TfxsBLpVcbYoY8xGJ553+7d85J4CNGNON2l+mSp+hwy6nFfp9DoNQGo8i4OuNpnhlJeO7cwf3wNN64/HKlZWFBFcrAtxh9SaV1BT0f7m+iuGUPxLESKwJvBYBfTwoaodNvMX/+yIBjPFRRlvTBPTBjGebIUpfJIA1xhxvZDhVYuJGR99hk4jnh5NbYiVmiI5AdCR2MjEw5eUHmBM5SCSYFT9G1pbWGzjb7kAUjDtzXsT+v4HUf/yzZ/N9RypSPfxmTz2tgKO4EvVi1+REtay/pBw/Ruy8uGkxEhQrEuhodPg4sXsIxWk3V8VpR8PJ/thB7J7+hi0Ok7Pl5Qc4djyyI0Hsnv4Ad3Zj38Are9h9W9uNVUOSePKbBQlcHnj69sDKbD4lhWVh/9E9ziRWfrUggZuP8jDW/8rBnbL7wE4JAgQ9EQxgCm4nooesv12qtDr2g3JWu3RZ4Mee0oV4xjXK/yWJo7jIKyGwSVmsxfcSygctZQwhXjq9ZTL89I81YThdhGOew4Y9X6gAOyYxbsy6yN6335B9R/Z00dhYFeAr7K9fniFKG+sGWgLsjPXDXkarh/ORIJFChVeVGJV1GycRiYqN6tB0iN3D3Lpp65HbPM8sm0WI3eMtsb5o5V2lhWwKEjzM4XKY2L3oijucB/yOhc/MZuQkNNZwntj1wgzkc2a42TWaRG10wynBHO0suJ/X+0E2VmNp9RDmxChIcO8iZogmECcXZo1Iu1SMiMRskhCJIgCATC4gCktdsBqrhkoCGDXWGE2LADMjeJkxouxRMSwSxJjO4rQIEB8zI5gcd3pgNVZHJNyOHUZjGRXERozpqjYCTOswM5J3KNFw9RCOHbUCSDDhAWydqac2AgTAtA4zI3hs8j2PkMR+kkCXDUiaxJSVcjK62NIJDvYaMyLMjOAxdyQG0PvNbtkZ2jdGIHG+2ZN8PQmQyGZOs26YxEnPp/9z8hy9WHsfZ+/L/axQaZuZz1hp6IO+siZsVhurCKQbbtmfGqRJ8HnL/tijkwjfR/lzm/8A0oPnZL7Uvr8AAAAASUVORK5CYII="
+                        class="close-icon" style="display: none;">
+                </div>
+            </div>
+            <div class="drag-area flewNum1"></div>
+            <div class="replacer-right"></div>
+        </div>
+        <div class="header-replacer" style="display: none;">
+            <div class="drag-area flewNum1"></div>
+            <div class="replacer-right"></div>
+        </div>
+        <div class="navbar">
+            <ul class="nav-icons" style="display: none;">
+                <li class="nav-icon">
+                    <a class="el-tooltip item">
+                        <div class="nav-icon-img">
+                            <img src="img/new-icon-print.ba66035e.png">
+                            <img src="img/new-icon-print-selected.22faafeb.png">
+                        </div>
+                        <div class="nav-icon-text">打印</div>
+                    </a>
+                </li>
+                <li class="nav-icon active">
+                    <a class="el-tooltip item">
+                        <div class="nav-icon-img">
+                            <img src="img/new-icon-meeting.8069992e.png">
+                            <img src="img/new-icon-meeting.8069992e.png">
+                        </div>
+                        <div class="nav-icon-text">会议</div>
+                    </a>
+                </li>
+                <li class="nav-icon">
+                    <a href="#/app/about" class="">
+                        <div class="nav-icon-img">
+                            <img src="img/new-icon-about.9ebf715c.png">
+                            <img src="img/new-icon-about-selected.6287ca8f.png">
+                        </div>
+                        <div class="nav-icon-text">关于</div>
+                    </a>
+                </li>
+                <li class="nav-icon">
+                    <a href="#/app/config" class="">
+                        <div class="nav-icon-img">
+                            <img src="img/new-icon-config.0b0af1ce.png">
+                            <img src="img/new-icon-config-selected.fd6ffbfb.png">
+                        </div>
+                        <div class="nav-icon-text">设置</div>
+                    </a>
+                </li>
+                <li class="nav-icon">
+                    <a href="#/app/account" class="">
+                        <div class="nav-icon-img">
+                            <img src="img/new-icon-account.5549ea0d.png">
+                            <img src="img/new-icon-account-selected.297d1757.png">
+                        </div>
+                        <div class="nav-icon-text">账户</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="meeting" class="content-position meeting-con">
+        <div class="AccessorialTitleBar">
+            <div class="AccessorialTitleBar-slot AccessorialTitleBar-slotLeft"></div>
+            <div class="AccessorialTitleBar-icon" style="background-image: url(&quot;data:image/png;base64,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&quot;);"></div>
+            <div class="AccessorialTitleBar-slot AccessorialTitleBar-slotRight"></div>
+        </div>
+        <div class="choose-meeting text-center" style="display: none;">
+            <div class="TitleBar" style="top: 90px;">
+                <div class="TitleBar-actionArea TitleBar-left">
+                    <button class="actionButton backButton"></button>
+                </div>
+                <div class="TitleBar-title">选择会议类型</div>
+                <div class="TitleBar-actionArea TitleBar-right">
+                    <!---->
+                </div>
+            </div>
+            <div class="choose-meeting-menu">
+                <div class="main-menu-item">
+                    <div class="menu-wrap">
+                        <img src="img/choose_icon_1_blue.b8f92aa5.png" class="item-icon">
+                        <p class="item-title font-30">发起会议</p>
+                    </div>
+                </div>
+                <div class="main-menu-item">
+                    <div class="menu-wrap">
+                        <img src="img/choose_icon_2_blue.13261826.png" class="item-icon">
+                        <p class="item-title font-30">加入会议</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none;">
+            <div>
+                <input type="text" placeholder="请输入屏幕代码" maxlength="30">
+            </div>
+            <a class="btn btn-primary">连接屏幕</a>
+        </div>
+        <div class="meeting-create" style="display: none;">
+            <div class="TitleBar" style="top: 90px;">
+                <div class="TitleBar-actionArea TitleBar-left">
+                    <button class="actionButton backButton"></button>
+                </div>
+                <div class="TitleBar-title">发起视频会议</div>
+                <div class="TitleBar-actionArea TitleBar-right">
+                    <!---->
+                </div>
+            </div>
+            <div class="video-start text-center">
+                <div class="create-meeting-normal">
+                    <input id="meeting-input-create" type="text" maxlength="30" placeholder="输入屏幕代码" class="font-30">
+                    <div class="errors">
+                        <div class="error-tip" style="display: none;">屏幕代码不存在，请重新输入</div>
+                        <div class="error-tip" style="display: none;">请输入屏幕代码</div>
+                        <div class="error-tip" style="display: none;">该屏幕不支持视频会议</div>
+                        <div class="error-tip" style="display: none;">当前屏幕占用中，请稍后发起会议</div>
+                        <div class="error-tip" style="display: none;">屏幕状态不正确</div>
+                        <div class="error-tip" style="display: none;">请输入正确的屏幕代码</div>
+                    </div>
+                    <button class="button-gradient-1">
+                        <span>开始发起</span>
+                        <span style="display: none;">正在发起...</span>
+                    </button>
+                </div>
+                <div id="vipmeetingDiv" class="create-meeting-vip">
+                    <div class="errors"></div>
+                    <button class="button-gradient-1">
+                        <span>直接发起</span>
+                        <span style="display: none;">正在发起...</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="meeting-join" style="display: none;">
+            <div class="video-start text-center">
+                <div class="TitleBar" style="top: 90px;">
+                    <div class="TitleBar-actionArea TitleBar-left">
+                        <button class="actionButton backButton"></button>
+                    </div>
+                    <div class="TitleBar-title">加入视频会议</div>
+                    <div class="TitleBar-actionArea TitleBar-right">
+                        <!---->
+                    </div>
+                </div>
+                <div class="join-form">
+                    <input id="meeting-input-join" type="text" maxlength="30" placeholder="输入屏幕代码" class="screen-code-input font-30">
+                    <div class="errors">
+                        <div class="error-tip" style="display: none;">会议不存在，请重新输入</div>
+                        <div class="error-tip" style="display: none;">请输入正确屏幕代码</div>
+                        <div class="error-tip" style="display: none;">会议人数已满</div>
+                        <div class="error-tip" style="display: none;">请输入正确的屏幕代码</div>
+                    </div>
+                    <button class="button-gradient-1">
+                        <span style="">加入会议</span>
+                        <span style="display: none;">正在加入...</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="meeting-view-con" class="view-con joiner fullscreen" style="">
+            <span>
+                <div class="el-popover mt-popup" style="width: 320px; display: none;">
+                    <!---->
+                    <div class="errors">
+                        <div class="error-tip" style="display: none;">屏幕代码不存在，请重新输入</div>
+                        <div class="error-tip" style="display: none;">请输入屏幕代码</div>
+                        <div class="error-tip" style="display: none;">该屏幕不支持视频会议</div>
+                        <div class="error-tip" style="display: none;">会议人数已满，无法操作</div>
+                        <div class="error-tip" style="display: none;">会议已关闭</div>
+                        <div class="error-tip" style="display: none;">屏幕占用中，请稍后重试</div>
+                        <div class="error-tip" style="display: none;">请输入正确的屏幕代码</div>
+                    </div>
+                    <div class="invite-screen">
+                        <input id="screenInviteInput" type="text" maxlength="30" placeholder="输入会议室屏幕代码" class="font-26">
+                        <button class="confirm font-26">
+                            <span>连接</span>
+                            <span style="display: none;">连接中...</span>
+                        </button>
+                    </div>
+                </div>
+            </span>
+            <div class="control-button">
+                <div class="action-btn">
+                    <span class="filtebg"></span>
+                    <img src="img/new-icon-voice-highlight.a35c4f88.png" class="normal_icon">
+                    <img src="img/new-icon-voice.9e0bca15.png" class="disabled_icon">
+                    <div class="btn-tip">
+                        <div>
+                            <span>禁用麦克风</span>
+                            <span style="display: none;">开启麦克风</span>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+                <div class="action-btn camera-icon">
+                    <div class="filtebg"></div>
+                    <img src="img/new-icon-camera-highlight.b93c055d.png" class="normal_icon">
+                    <img src="img/new-icon-camera.1ba3fe32.png" class="disabled_icon">
+                    <div class="btn-tip">
+                        <span>关闭摄像头</span>
+                        <span style="display: none;">开启摄像头</span>
+                    </div>
+                </div>
+                <div class="action-btn invite-icon">
+                    <div class="filtebg"></div>
+                    <img src="img/new-icon-tvmode-highlight.92591c2c.png" class="disabled_icon">
+                    <img src="img/new-icon-tvmode.c3c4fe6e.png" class="normal_icon">
+                    <button></button>
+                    <div class="btn-tip">
+                        <span>连接电视</span>
+                        <span style="display: none;">回到电脑</span>
+                    </div>
+                </div>
+                <div class="action-btn share-icon">
+                    <div class="filtebg"></div>
+                    <img src="img/new-icon-sharescreen-highlight.fe5a3a09.png" class="disabled_icon">
+                    <img src="img/new-icon-sharescreen.d8ee597a.png" class="normal_icon">
+                    <div class="btn-tip">
+                        <span>分享屏幕</span>
+                        <span style="display: none;">停止分享</span>
+                    </div>
+                </div>
+                <div class="action-btn leave-btn">
+                    <div class="filtebg"></div>
+                    <img src="img/new-icon-leave-highlight.24368497.png">
+                    <div class="btn-tip">
+                        <span>退出会议</span>
+                    </div>
+                </div>
+            </div>
+            <div class="control-screen text-center">
+                <p class="control-screen-num font-50" style="display: none;">278416</p>
+                <p class="control-screen-title font-26" style="display: none;">参会者输入上方屏幕代码即可加入本次会议</p>
+                <div class="sharing-tip" style="display: none;">
+                    <div class="sharing-content">
+                        <video autoplay="autoplay" id="video-thumbnail" src=""></video>
+                        <h2>屏幕分享中</h2>
+                    </div>
+                </div>
+                <div class="control-screen-right" style="display: none;">
+                    <div class="laptop-wrapper">
+                        <p class="font-15">278416</p>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABJxJREFUeAHtnb9qVEEUhzdqECwURQQhlQYRUylpfAAL8U9sYucLaJU30F5iFV/AzjT+QSxsUlqIVopFFEFBUDFoYRM0/o7sFhF27tnkzL0z2W9guMnO3DNnvi93du/dm91ejwIBCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACUQQmogL9H2djY2OXHruqOq86q3pUdVKV0uutC8Jn1Reqy6r3JyYm/mgbXrIIltzTyvSe6kx4xjsz4GtN65okv4qeXrhgyT2nJB+o7otOdofH+6X5XZHkZ5HzDBUsudNKzpadA5FJjlGsH5rrrCSvRs3Znicjy20FQ+7WiRo7YxhWwo5gHb3HlVXYX17YDOsMNK2j+F1E6pFH8MWIhIjxj0AYy0jBJ5ATRiCM5Z6wlHq9ww2xnqt9saHPuDQvaKJnE5NtYpnYdXNTpOCm5/OPel6xk/qxL3q9Yhd/UqWJZWrfTW2RS/SmwPxSBgEEl+EhWxYIzoa2jMAILsNDtiwQnA1tGYERXIaHbFkgOBvaMgIjuAwP2bJAcDa0ZQRGcBkesmWB4GxoywiM4DI8ZMsCwdnQlhEYwWV4yJYFgrOhLSMwgsvwkC0LBGdDW0ZgBJfhIVsWCM6GtozAkfdkhc9I9y49VFD7b4lhZUn3ed0d1ti/V/vRsPb+45dT9yArxnX1u5GIsar95xLtnTYVLVhkTO6pBKEjiTZr2qua2n/Qx7bDio3RFGPYvp0/zhLduYK8CSA4L9/OoyO4cwV5E0BwXr6dR0dw5wryJoDgvHw7j176adKSCKVOhVYaCH5V+y1Hn1SXlVSj2r40tHfaXLTg1EUMDzXtb4JvevoO66MYK2qzWmVhia5Smz9pBPtZVdkTwVVq8yeNYD+rKnsiuEpt/qQR7GdVZU8EV6nNnzSC/ayq7IngKrX5k0awn1WVPRFcpTZ/0gj2s6qyJ4Kr1OZPGsF+VlX2RHCV2vxJuz/0UjeA2xdHpMqUGvcnOvxU26dE+zg1bZuV3qee8QAbRfCGJyB92iEgwS53LNHt+OhsFAR3hr6dgRHcDufORkFwZ+jbGRjB7XDubBQEd4a+nYEj74teVspv2kl7x49i/4/c9MUdsRB0oaOptJtQ7PSKiibQ802wvQmzRHtJVdoPwWWKC7tqiOAyBYdlheAwlGUGQnCZXsKyQnAYyjIDRZ4HT+mlfbWfJ1WYHnu/OKS43lO0kSTvuzYHQ0YlyHYJrOnt4EOeIKMs0R88AenTCgG3i1EEP20ldQbxEHC7GGWJPqaR36pOejKgTzYC64p8Ukv0e88I7iO4H5CvaPdQzdtn0SvX0nAfwdZZL7R2a/NY9bz9TmmdgC3NlyT4t3dk9xFsAfuB7bOR7fOrwq6XWmxKkoCxNuZzo8i1iCMdwbbDoOhoPqOfF1QvqHL6NAATu11TuCeqdyT25VZCb1nwYDCJthiH+3Xb8QZxx3xrR+w3qxLLSjnmfwxMHwIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhAoh8Bf6x7GMO1Mtz8AAAAASUVORK5CYII="
+                            class="laptop">
+                    </div>
+                    <div class="addfriend" style="display: none;">
+                        <img src="data:image/png;base64,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">
+                    </div>
+                    <div class="addfriend" style="display: none;">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAACFFJREFUeAHtnVuoFWUUxz2amnmtLC9dtdAKMY1MjMDshmRaYmBCSCEFFUQPBfVSEkm9RElXCszyIYIsIdDKSrrY/UJmlmZpJqKWpmaaqZ1+a3OOR47OWt/Mnpk9M2ct+HvO2eu7rPVbe8+eyzdjp05uTsAJOAEn4AScgBNwAk7ACTgBJ+AEnIATcAJOwAk4ASfgBJyAE3ACTsAJOAEn4AScgBNwAk7ACTgBJ+AEnIATcAJOoPIEmqqeYXNzc19yHHyYuvD7plY1NTVt53e3MhGgqKPQbPQNsuxHGjyCxqHKv+HLVMcjYqVAk9FKlNTW0fFG5IU+gm4DX6AgF6EPUFomn/wrGpiST91KgELcgfanVdl24zzI3/5pboWd50/Ad0XPtCtIFn8uZNCeeebW4ecCeBN6LYtqRoz5Ea937/Dg8wIA7IciCpHly/Pzyi/NeUr3/UIFbwDAyzEg7KTtm2gVkuPfg0iOi4ehq1F/FGp3c9z8aGhjbxeTAMXtj3YGfkx/oN001DVqGnxd0FXocxRisjMnbwy3LAgA9/GAKhykzX1IzlgFGW3lO/0WtA9Z9mrQoN4oHgGoD0FWAf6hzeR4I7e1pu/F6E9k2di2Xv5bKgQg/pRFHf/MeidjDNlkHzDmWlTvPN7/MALAlk3oRgP684d1qetX5nnAmGsP/uPqmsQ7txEA5hgD+G78A9t61PebFA9tMua8rr5Z8undOZ9p6p5lijHCPA5fNhttgt2MtYfGc40O1xr+QrjLUuARBq3XDX8StzWmFVOSOTtmHzaVnymbS9lzPiYLMoz7qzLvxizmTHvMsnyC5cxTlG1ik3ogylnn6xuU/gMofuH5FT7AFsAnK6C3Kr56XVuUAWSrcaLiL4SrLAXepdDqo/jqdcl6Ls20uLR+ufnKUmC5SBBl2uY7qk/o64OUhtv5atin+AvhqkKB+/JdODxtmozZjzG1cbU3XdrhJB6vLAVeb2SYxUmHScyp7Z1bMRkh5+MuS4Hleq5ms/jEacXQ+kb5botytLy+xPC7O5QAxeuB/kaa3R46ntWOSaZoE7X4TrXGcX8MAkBdZEDfgf+cGEMetSljDELWhY0vjtrZX0xOAOgTkWVraKAdM6sB0Lc3+tSaBP8sdSB3JiMA2HcD4MvpxfPjzkAfWVDwXcD4q2gTvFokbhwduj1gL0T/BRRBrtc+jKwTFZ1oI9/v9yLZxIeYdWWrQ9eo7uSpwLMhVWhpI0VbgK5H56F+qA8ajuQ+pufQVhRqb9SdgA+gE6AS3dCHoRVJsZ1smrM8LaonntBbunXRkiegT+KH7MmeIX/nYNuZYyynJtfmMJdPIQQo8jAke81ZmyzdGePUG0AA8MejtzOs8JeMfUoDUvMpWwlQALk7YQ7ai9IyWTb7NOrROo//bCABKQSaiVaikMMomkXaz3jknuPS7VA1sATpT00BZK30BDQP7UJpm2wRXkGTUNoXMtIHUpURgS03ft+EVqO87DcmuhP5JjurNxJw5RN7M1qPGmVbmPgu5J/oNAsN0JFoOSqKrSCQS9LMsUOOBcTOaDaybgajSe4mO3NPIn+0Q5J3J+AGopCrRzRrqH3F7GclyTGPPoU8VQmwUSS/GGmrGjU+O3C+j1ag1Wgdkkc5/IWaUe8WnclPWVgnt6GMR0mvJcvYUzmVuYyfbhoBijsehT6mgaaHTFZhyCMJ5ZJi7LVm9JGduBHofvQTimtyC800LbcO7wOQrNoQUHFMnsUxFcUuqgac8S5Hoc/uoGnN5PERdd+ErsVVWh9gxqLdNUxh/8hFgFtRZqsrGFs+1dPRWhRq8qCWa0pbiCwCB4hcgP8jkKAAlM1obnfYM5ecXJETHdbKTprUTFaUjMuCVenGBITcTf99DYv9zzaaXNaoJJl7NNpgh1lrIVuYpDttjUox/XmB8EINh/2PrKg4O/0I4o1IDHL49okdbq3FW/xbyCOVeFknbE3yMwJBLaFdYa7uEEt39FJg7PckxFPubsCRm8Y2B0D6mDaFO1tETLIDtiggfvnePr3c1UoQPUk/EQBHruKk9vScBGGqXYitFwpZS20970Odp3ROoJyL5JhRM9kTvaDoyRHjEPS7lkiLr2E7h7kzJOEFAUCm5x5YwgnJZTyyLoi8l3D4cnUDxNAAGHIeulRGTrKI3rLqHxtDYK5BQTbdI0tVXYIl5sHIOhGysGx5xYoXAHJGyPq+ejHWoAVqTG5zkGb7cJ5QoJDTDYXk5H4gzeRCQ2kPKYhd7nuyTrlaTw5IFXqqV2ACIpthtJFnTm4w2hTWTezyWKXHjAAtBkb3grp5Z8uJAVm0plnpH7RNcqchWc4TZf/iqN5/00NScjFdszUFfW/GDoskl2mJ4psYe9CEHfLcRE8wYqzSU2usXC41WKTmzrPA1qFPldYzWSc1LBalLLD21DhJaHlqWTV+oK8JYa8ShsVC6VpQF9872g7WtoKGnTgs8v1W+R6Wkzm5XCHLZRNNMt0gpa1uWJ2YZHE7ajuNwj3Lh6geopJLgZlN1iFrltr/t6BNkrPPyslikkq4RSmwLEivmlk5VarAxxrVkzsDqmZyd4VmFhOtb7Avr0/wOiLar0S1UvGV1WXlVK39Dna05kfsVcpS2AFlrWJU3OTUE/0SkfPSqH6lfZ1E5SlzS9slLE+Zu7K0SRmBk5vcJ9X+hnW5HSa3RxHnumaXxGQ+uYtvNJJH4r/DFZjKHQOT1yEj5178IW/ioUg225Kz/CfVbk7ACTgBJ+AEnIATcAJOwAk4ASfgBJyAE3ACTsAJOAEn4AScgBNwAk7ACTgBJ+AEnIATcAJOwAk4ASfgBJyAE3ACTsAJpEPgf7Bqh8iuhx55AAAAAElFTkSuQmCC">
+                    </div>
+                </div>
+            </div>
+            <div id="video-call-con" class="video-view sharing-mode  isFullscreenMode fullscreen">
+                <div class="layout-main layout-fullscreen" data="2">
+                    <div class="layout-mainview">
+                        <div id="panel-14465752" class="layout-panel">
+                            <div class="layout-menu-bar">
+                                <div class="layout-extra">张三</div>
+                                <div class="layout-voice ">
+                                    <div class="voice_switch unmuted" rel="voice_switch">
+                                        <img src="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layout-name">张三</div>
+                            <div class="layout-tip hidden">对方网络不稳定</div>
+                            <div id="video-14465752" class="layout-wrap">
+                                <div class="hidden">
+                                    <img class="endcall-no" src="">
+                                    <span class="tip tip-endcall-no">电话接入</span>
+                                    <div class="endcall hidden">挂断</div>
+                                </div>
+                                <div id="14465752" class="video-stream meeting" style="margin: 0px; width: 100%; height: 100%;">
+                                    <div id="agv-14465752" class="video-wrap" style="overflow: hidden;">
+                                        <div id="player_14465752" style="width: 100%; height: 100%; position: relative; background-color: black; overflow: hidden;">
+                                            <video id="video14465752" style="width: 960px; height: 540px; position: absolute; top: 15px; left: auto;"
+                                                autoplay="" muted="" playsinline=""></video>
+                                            <audio id="audio14465752" autoplay=""></audio>
+                                        </div>
+                                        <div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                                            <div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                                <div style="position: absolute; left: 0px; top: 0px; transition: 0s; width: 100000px; height: 100000px;"></div>
+                                            </div>
+                                            <div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                                <div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div>
+                                            </div>
+                                        </div>
+                                        <div id="player_14465752" style="width: 100%; height: 100%; position: relative; background-color: black; overflow: hidden;">
+                                            <video id="video14465752" style="width: 960px; height: 720px; position: absolute; top: -75px; left: 0px;"
+                                                autoplay="" muted="" playsinline=""></video>
+                                            <audio id="audio14465752" autoplay=""></audio>
+                                        </div>
+                                        <div id="player_14465752" style="width: 100%; height: 100%; position: relative; background-color: black; overflow: hidden;">
+                                            <video id="video14465752" style="width: 960px; height: 720px; position: absolute; top: -75px; left: 0px;"
+                                                autoplay="" muted="" playsinline=""></video>
+                                            <audio id="audio14465752" autoplay=""></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layout-bigger">
+                                <img src="">
+                            </div>
+                            <div class=""></div>
+                        </div>
+                    </div>
+                    <div class="virtual-scroller" data-handled="true">
+                        <div class="virtual-scroller-inside-div" style="width: 500px;">&nbsp;</div>
+                    </div>
+                    <div class="layout-thumbnail">
+                        <div class="layout-thumbnail-content show">
+                            <div id="panel-15568242" class="layout-panel">
+                                <div class="layout-menu-bar">
+                                    <div class="layout-extra">石进华</div>
+                                    <div class="layout-voice hidden">
+                                        <div class="voice_switch unmuted" rel="voice_switch">
+                                            <img src="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layout-name">石进华</div>
+                                <div class="layout-tip hidden">对方网络不稳定</div>
+                                <div id="video-15568242" class="layout-wrap">
+                                    <div class="hidden">
+                                        <img class="endcall-no" src="">
+                                        <span class="tip tip-endcall-no">电话接入</span>
+                                        <div class="endcall hidden">挂断</div>
+                                    </div>
+                                    <div id="15568242" class="video-stream meeting" style="margin: 0px 0px 0px -34.5px; width: 157px; height: 88px;">
+                                        <div id="agv-15568242" class="video-wrap" style="overflow: hidden;">
+                                            <div id="player_15568242" style="width: 100%; height: 100%; position: relative; background-color: black; overflow: hidden;">
+                                                <video id="video15568242" style="width: 157px; height: 88px; position: absolute; transform: rotateY(180deg); left: auto; top: 0px;"
+                                                    autoplay="" muted="" playsinline=""></video>
+                                                <audio id="audio15568242" autoplay="" muted=""></audio>
+                                            </div>
+                                            <div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                                                <div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                                    <div style="position: absolute; left: 0px; top: 0px; transition: 0s; width: 100000px; height: 100000px;"></div>
+                                                </div>
+                                                <div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                                    <div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div>
+                                                </div>
+                                            </div>
+                                            <div id="player_15568242" style="width: 100%; height: 100%; position: relative; background-color: black; overflow: hidden;">
+                                                <video id="video15568242" style="width: 117.333px; height: 88px; position: absolute; transform: rotateY(180deg); left: -14.6667px; top: 0px;"
+                                                    autoplay="" muted="" playsinline=""></video>
+                                                <audio id="audio15568242" autoplay="" muted=""></audio>
+                                            </div>
+                                            <div id="player_15568242" style="width: 100%; height: 100%; position: relative; background-color: black; overflow: hidden;">
+                                                <video id="video15568242" style="width: 117.333px; height: 88px; position: absolute; transform: rotateY(180deg); left: -14.6667px; top: 0px;"
+                                                    autoplay="" muted="" playsinline=""></video>
+                                                <audio id="audio15568242" autoplay="" muted=""></audio>
+                                            </div>
+                                            <div id="player_15568242" style="width: 100%; height: 100%; position: relative; background-color: black; overflow: hidden;">
+                                                <video id="video15568242" style="width: 157px; height: 117.75px; position: absolute; transform: rotateY(180deg); top: -14.875px; left: 0px;"
+                                                    autoplay="" muted="" playsinline=""></video>
+                                                <audio id="audio15568242" autoplay="" muted=""></audio>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layout-bigger">
+                                    <img src="">
+                                </div>
+                                <div class=""></div>
+                            </div>
+                        </div>
+                        <div class="layout-thumbnail-ctl">
+                            <div class="info">2人参会</div>
+                            <div class="switch fold">
+                                <img src="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen_room_info" style="">
+                <div>屏幕代码
+                    <br>278416</div>
+            </div>
+            <div class="screen_status_info" style="display: none;">
+                <div class="room">参会者输入屏幕代码即可加入本次会议 278416</div>
+                <div class="room" style="display: none;">正在控制屏幕：</div>
+            </div>
+            <div class="room-status" style="display: none;">
+                <div class="room" style="">
+                    <img src="img/new-icon-meeting-logo.97ea8904.png">2人参会</div>
+            </div>
+            <div class="time isFullscreenMode">00:35:22</div>
+            <div class="user-invitor isFullscreenMode">
+                <div class="trigger">
+                    <img src="data:image/png;base64,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">添加参会者</div>
+                <div class="triggers" style="display: none;">
+                    <div class="trigger-arrow"></div>
+                    <div class="trigger-menu">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAAH7+Yj7AAAAAXNSR0IArs4c6QAABK9JREFUWAm1mMuLHUUUxnNjYkTUXYSQcS4aougyf4CPGEURE2M0Ro3ZCIqLiNkYNwb8D9TgypCBCXFhQHGhC7MQFyL4WKhRkQwmPhCMiE984Djt7+upU/fc6qq+dZNY8E2d+s53vjrT3be7712xgtE0zQnNcUB8pgXzbCQDMQPZjjSxNvDDNDETCRRH4kIBxI4wNzEhn0CuIfzBJ662hYnatS1slq/GvWBOgVWNzfAvgRdFMq8O8+ExkV8g0vhreYpNPqa118UY/jh4JBIEEg884WMl/bqN4baCn0HbY0cgguQS0Bi2f5vmWEk4tkUQ7+mIlTCSsD1xzBcZF2fIF0ArZloM+Fgco3MFvbLMN2+F2Qq17PYMuV1bMf8LFkNM2NwTW7BArMU2i1tpCzfP58QuPwoRWs+qGe1APAB24JXz47mRRUVE5TarTuXws5Zj7h6ltEBrhL+GotFHMBGSvyZoRv9WoolLhBeamDmaEh8NfHt6YkFtQLE/wButDl7nvG/MmzY7U/lUodqMY8fohk5bd4zTXTFojT0Pd6sZez4bI1xvYuYrsiJI05TyHZ4Cf4xv9gJydqW87/mqmOL7rBs3f9ApJrkSHAI/gs/Bzo6olqD4aVAaF9T6tDpcbnNOx4g3gLscp3BVtakrvDstIvely9eZWkFqZmtvalzvPMlQxWh+C7r9vWZB3GpTIeR+cFPQXEZ8e6rJrhGeBhqnvWCZav/u8nxV7IoXrADuQcfvIn7CrRUeNG1nJrnaiUumTjIW5s9+YqqKd8BJBW60J4X1JeB3x+dN1TqiP53QwlMWMMdjSuyv0/InCqE+13eAG+z4EO8GNjwfTU1bPeNmJ2qvL7JdmDufNq9rY0SdO3QqQrMzmH6Ue3VI9X+LoCCe/VTAun2hZl6byXWpsLumrCn8G0FTvja9LWJ/nX6V5B4KZpNfApJCb2oeft7n9dUxDvEycW7XFw0Q6Q5+wolLoYzP/rlT7KCQYLMDpU4qeD2Kyh/nwp5VNMb61H6aNKEnc/uVLGdCbgv4OqnR8vw3iunhZKOXc03lOOpmgU51Og7l9GfF4fxT4n7ltEbUD0HaqO7ml0/r1dFj8gXwY2tHVElgstcZ/UP8amVpWYbJ/c5U4RK4sVRBzr/O65tmfFyVas6ZZ5MHQDoWIGZSczh9QNoHjCvINkp+PbgF6HcKffe7FpSfs+lmfk3hKuDf8Fm2o9SoHqVqzA+tv/VET/wHuSd9D1UxRXpk5BrVu6Z+S7nUG7F+BvSNT0i+Cd4Gubcb1U5/e6JIjR5V9TmM0qnXt+5TGd/pG9XRwmgIngdnQG68B/ko0GWiU197jc6iTW9PUM2z/iz9LzGb5BrN3sDRDsE3wI+TLM7P4xMjvWZvB0fAxf4/Zr0ZzIHHQe8bI/l54Ef5B0e/SV+M2wHvSPwL2NBXU8pRtzHx+r6knYrH9OHEWMsF0LmP9hmjj2+rMmB82KefKodZ6fZU1Sj1e9RRMrZM1USNmA1KjS6RmwM7wFXgOrAbvA7SsQhRfquuaWSShg10yzmY7jxhrcbGvjsUfzOf1MA0eTbVT+zbwJ1gE1gHFsF34F3wGjg+GAw635T+A2njM8yHCH6FAAAAAElFTkSuQmCC">分享链接</div>
+                    <div class="trigger-menu" style="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAAH7+Yj7AAAAAXNSR0IArs4c6QAAA1NJREFUWAm9mMtqFUEQhnPiZaUuIl4QgyKIgiAmiDsv4ELduzIIESHoKk8i+gbiCwi6UXBlBF0oCu5OwFsUUURBcKOGM341mT6p7unume4ZbKjT1X/99XfNrU/PTBRFcQYrJlSbxD+mxusuxOfro8pz0weGYQWsQcWQiSZqgRqg9H4YX/rgRCsiUbXrOqPmGxb9p1pQAxDOC1ljrj+uRwIVeXUwGGxS4zLHIpZI9VObAWAkIO2rJrr+QBgGZMrgDOUpN8RYn0ScFaXYtOOZpE7a1jEQc4QZi+sa5zQZ/5mMqza0TgfgFKrfY8pWjIQnRsr0cn3/moHTn7SyWw7kWJYC3KsBPArLLRE8zlbXyieP6BfncIc+XhKmBB8kJcbIiP4ywjFeUgzB40aU/n0omdgCdjAUr+GQz2G6XRYSgL6Tdbz0a0I+AObdWmYA8OU3YmhJ9S99mnIIQ0/gWqNqgGCtdZqTe1PrZUTrZfv/T5Dzui+nTKlwFEhcDOBxmEpueK6yQLvjmYEoiRs9gnsD9HawIyjrY7eGYLkvEOFuSipbVRnflaicqIvgtBKdi5LbBhG8p0QPtc2L8hAcr9r4R3xkcLkz2t+nkM0uCrewVh7G2wT0NMk57SugxAjqSr8JCBYSM/qhp25tHlj6nJqkaG9tbtZk7F+yp0FWbDQ8aly+WGg/VovthbBMhwgVyxWWBUVfOIZlG8qJXq4GbbpVSDs71JOcKqdwR0LWBrhZ28aEOSyqFPjZQpoH3oexOS2PIQU+Tky9ksjvRJcC7ycq7Oc+nE/MyaZP8og+JPtVokK3f9jEyeRJdje+oSf6HYEDqfq98Jn4Zqgq8NfYrl4m6iJCEbXXVLCZLpq951LQC8xtF3ufqIsg1fnel2510ew9lyIX3dPI+Dd2qvfJcgUpZgr7gLntDUDem0FuMbE8ipFl6I9bJeOfEovlmhg82f09xXSTr5G3sXnsLHYU24NtNnlJPYmXMF+hwMUdbLsrCCaFRT8kEA+1ZVev1Rg1+VTiu/Rmokc4s1huYUan+5sXSvIw6Q39WLwPp9UZa0uiIHnn9K2j2bW2nTuLR1UzmPyFuh8P2xY8anzLyaqsIYnq5BPBCewwJq+4YvJfL1+wxbZgb7GFfwAE7CGzJ925AAAAAElFTkSuQmCC">拨打电话</div>
+                </div>
+                <!---->
+            </div>
+            <div class="mt-notifiction animated  fadeInLeft" style="display: none;">
+
+            </div>
+            <div class="sip-wrap call-phone" style="display: none;">
+                <div class="sip-panel">
+                    <div class="sip-panel-wrap">
+                        <span class="close">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAAAXNSR0IArs4c6QAAANRJREFUKBWNkkEKAyEMRTXQRVc9REV6oen5uu5mzqMwyx6g64I2X1REiaPg6CT/fY1EOecePF8xxotaHNCCAUvW2oO5m/f+vWICDbRgMqtUdtzZcZ+ZTHXTJB93lk/VSyIpDkgnsvlAnGtUXOMTqfZfa/1r5KMBko2JJiIVQogw6+HWaNizyZUf9YOJ/SDIgaEExMsN+HTNp6eQdAPKRnUpMALGmI3BDfulPgGMXuj7QYrDuI4z0TQ/TdYjhGZahYtPryd+nDsnv9IrF7Cs6AVowYD9A5oPGVGR499uAAAAAElFTkSuQmCC">
+                        </span>
+                        <div class="tip">输入姓名或电话号码邀请参会者</div>
+                        <div class="form-ctl phone">
+                            <input type="text" id="callPhone" placeholder="">
+                            <input type="text" id="showPhone" placeholder="" style="display: none;">
+                            <button>
+                                <span>拨打</span>
+                            </button>
+                            <!---->
+                        </div>
+                        <div class="sip-old-phone">
+                            <div class="sip-old-text">最近联系：无</div>
+                            <ul class="sip-old-wrap"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con-wrap" style="display: none;">
+                <div class="invitor-panel">
+                    <div class="tip">参会者使用浏览器打开链接即可加入会议
+                        <span class="close">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAFN++nkAAAAAXNSR0IArs4c6QAABHxJREFUaAXlmk1u1EAQhTNDjsAJWCS5AFwCJJaJyBHgDog7wBGCYMkCcocgsU6y4AQcIclQz/Kz2u3+qWpXR4OwFLXbXVXfe26nx53JwYHmuL6+3sVxNzc3p7NrYdBikJEIige3HES72WzOdrvdl/DadB5mhrghIBxkxiKIA2GrCgoTpvNs5n4OUHdWHQOiFnd2kbO4oEmKYg7iIklSnBT3USQuFMcs+jFJVSBOiqsmi9SSVEXioFp/I9Q7BB0fHx/WgjkO+dvt9tXQRwEWYUCuRSJszsY1BZKJrFIqUEwsFVAlpgqUEjdMiFtYkNXsCVY1mYmv8Tj6s+UvDECi9B/k5yK8Hp4nkyEVxJOTExQ4gIowKXue8liahalQKpGDxQKlxGIBTWKqwAaJpelgUtiON/DXMM9jgXvLb1ZYTHsu0FN8EorYy+kBg5LxgXIXQCAE8g5NYKr2FJACkrMAc2CNgBKQ9bNgBlgEaICsWwUzsCTAAmQ9NZgJoQC5do6nFGN8aBhXa81gFAwdSveBi1wNFo6bwCGQDsM7YFkHVOAUMFSPc6uAIlgDbBWQBLcArQJmYA+gVsAA7gFUCRDwj9vb25dxcI++sK6E9axHbV1NuLW8CeiqpqOEdQcWRreyEHzCCZY+GZi/+WLA6QCUn/couT06OvqOVQidXvAQytVt+nWC29YFH6JzRwqK2AmMjjc8B12APeElaBLsAa9Bs+A1cA20CG6Ba6FVsAVugarAGrgVqgaX4C1QEzgFl2sXXAa5IiFOc8wWEE2COJxWOMTLctu010ruzUsCxBn+QoANP49znlhaMxhzKgDkDfDWDxYTOHyQ8BK/5lNNPcchNHyQwjmHkHEqqnddBc5BWb0FXgXXoK3wIlgLbYFnwVaoFZ4Et0It8AV4LVQLn4G9oBr4BPaG1uADuBe0BN8K9Kr1o42Fay1Ws3B5RTy2MGfy8zNcBmuFWsYBx7cKwrpE/nCrsW0U1x+l/1QGPmBb01J833Kw9RZf70XXH/H1Tnz95rOFaX5OwTJ4L+fn2g8a5u1LK48tNr3DWxk1iSc8TS/C3+JU0D9lPGN05mEyzDuhSWLsvrQWzQvDNGEpwpzHbls0Zg1TfEtR5vZq12iqGqboNRDWWNt6aFAbplgPKGtpW0+m2TBFeopgzbjtwWg2THE9RPWoSb2rDbOQh0iPGtSTa90ME9AiuiWHPGvrbpgCNCY0Mazn1XYzTIEpUzLGv8lNf+F6rPf37oZD47JB+Sz9yeQ49iBm3zzWRiWGU59ry1lOmAUHGi7GGPS7Hl1nmEZlZod/BYMTPrqjq3gLN9vZ9HDexXDJaPzoWmI9boCr4TXi1+RaboSLYU+xnrVSN2KV4Z7ietVuMtxLTGpGvFkmw97wlMHcNS+2yrAXLGfGcn2tlqLhtcUtRqyxrdqShluLWUV7xFu1zgxbkz0Ee9XQah8Mj19JfEu9AsZvRl4Ce9XJGZdX2tf4CmnYPIjRtzSLd135wff5h/+aWdxEaIZ2eIAXXIM3eMT5f3f8BSZzjCoYpLM2AAAAAElFTkSuQmCC">
+                        </span>
+                    </div>
+                    <div class="form-ctl">
+                        <label></label>
+                        <a class="copy">
+                            <span style="display: none;">正在生成链接</span>
+                            <span style="display: none;">重新生成</span>
+                            <span style="display: none;">复制链接</span>
+                            <span style="display: none;">已经复制</span>
+                        </a>
+                    </div>
+                    <div class="form-ctl email">
+                        <input type="text" placeholder="通过邮件邀请">
+                        <button>
+                            <span>确认发送</span>
+                            <span style="display: none;">正在发送</span>
+                        </button>
+                    </div>
+                    <div class="form-ctl feedback" style="display: none;">
+                        <div class="ok" style="display: none;">邮件发送成功!</div>
+                        <div class="fail" style="display: none;">邀请邮件发送失败，请重新输入邮件地址!</div>
+                    </div>
+                    <div class="errors">
+                        <div style="display: none;">请输入Email</div>
+                        <div style="display: none;">Email格式不正确，请确认</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

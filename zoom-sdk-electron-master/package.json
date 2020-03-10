@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "asar-cli": "^0.2.0"
+  }
+}

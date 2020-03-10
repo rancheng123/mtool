@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "strict": false,
+        "jsx": "preserve",
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "types": [
+            "node"
+        ],
+        "paths": {
+            "@/*": [
+                "demo/*"
+            ],
+            "helpers/*": [
+                "src/helpers/*"
+            ],
+            "stores/*": [
+                "src/stores/*"
+            ],
+            "interface/*": [
+                "src/interfaces/*.ts"
+            ]
+        },
+        "lib": [
+            "es2015",
+            "dom",
+            "dom.iterable",
+            "scripthost"
+        ]
+    },
+    "include": [
+        "./src/**/*",
+        "./types/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

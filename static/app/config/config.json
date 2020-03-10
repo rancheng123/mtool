@@ -1,0 +1,10 @@
+{
+    "mqtt": {
+        "url": "tcp://meetingmqtt.mxj360.com:1883",
+        "userName": "mtool",
+        "password": "mtool@123"
+    },
+    "meetingServer": {
+        "url": "https://meeting-service.mxj360.com"
+    }
+}

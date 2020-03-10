@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Apply"; ObjectID = "1CL-jS-cEp"; */
+"1CL-jS-cEp.title" = "应用";
+
+/* Class = "NSButtonCell"; title = "Auto Login"; ObjectID = "MLe-na-P7u"; */
+"MLe-na-P7u.title" = "自动登录";
+
+/* Class = "NSTextFieldCell"; title = "Server IP:"; ObjectID = "Sk4-wF-zzz"; */
+"Sk4-wF-zzz.title" = "服务端IP:";
+
+/* Class = "NSButtonCell"; title = "Cloud Print"; ObjectID = "r1k-PP-vi7"; */
+"r1k-PP-vi7.title" = "Cloud Print";
+
+
+

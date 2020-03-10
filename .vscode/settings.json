@@ -1,0 +1,18 @@
+{
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "dist": true,
+        "binaries": true,
+        "release": true
+    },
+    "vetur.format.defaultFormatterOptions": {
+        "prettier": {
+            "semi": false,
+            "singleQuote": true
+        }
+    },
+    "editor.tabSize": 4,
+    "vetur.format.options.tabSize": 4,
+    "editor.detectIndentation": false
+}
