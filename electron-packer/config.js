@@ -1,20 +1,13 @@
-
 var path = require('path');
 var mToolPath = path.resolve(__dirname,'..');
+var packageJson = require( mToolPath +'/package.json');
 
-module.exports = {
-    mToolPath: mToolPath,
-    dir: mToolPath + '/',
-    out: mToolPath + '/dev-release',
-    zoomPath: mToolPath + '/zoom-sdk-electron-master',
-    appName: 'mTool',
-    platform: 'darwin',
-    arch: 'x64',
-    icon: mToolPath + '/build/icon.icns',
-    //签名
-    OsxSignOptions: {
-
-    },
-
-    electronPath: mToolPath + '/node_modules/electron/dist/Electron.app'
+var config = {
+    appDir: mToolPath,
+    out: mToolPath + '/dev-release/',
+    icon: mToolPath + "/build/icon.ico",
+    appName: packageJson.name,
+    "platform":"win32",
+    "arch":"x64",
 }
+module.exports = config;

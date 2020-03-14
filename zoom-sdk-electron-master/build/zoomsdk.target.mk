@@ -53,13 +53,13 @@ CFLAGS_OBJC_Debug :=
 CFLAGS_OBJCC_Debug :=
 
 INCS_Debug := \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/include/node \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/src \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/openssl/config \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/openssl/openssl/include \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/uv/include \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/zlib \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/v8/include
+	-I/Users/mxj/.node-gyp/5.0.2/include/node \
+	-I/Users/mxj/.node-gyp/5.0.2/src \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/openssl/config \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/openssl/openssl/include \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/uv/include \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/zlib \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/v8/include
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=zoomsdk' \
@@ -109,13 +109,13 @@ CFLAGS_OBJC_Release :=
 CFLAGS_OBJCC_Release :=
 
 INCS_Release := \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/include/node \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/src \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/openssl/config \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/openssl/openssl/include \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/uv/include \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/zlib \
-	-I/Users/deo/Library/Caches/node-gyp/5.0.2/deps/v8/include
+	-I/Users/mxj/.node-gyp/5.0.2/include/node \
+	-I/Users/mxj/.node-gyp/5.0.2/src \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/openssl/config \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/openssl/openssl/include \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/uv/include \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/zlib \
+	-I/Users/mxj/.node-gyp/5.0.2/deps/v8/include
 
 OBJS := \
 	$(obj).target/$(TARGET)/lib/node_add_on/mac/zoom_native_sdk_wrap_core.o \

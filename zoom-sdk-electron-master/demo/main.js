@@ -71,6 +71,7 @@ let hasLogin = false;
 //认证成功
 function sdkauthCB(status) {
 
+    debugger
   if (ZoomAuthResult.AUTHRET_SUCCESS == status){
       console.log('认证成功')
       debugger

@@ -15,34 +15,8 @@
         "./static/",
         "./node_modules/",
         "electron-builder-dev.json",
-        "package.json",
-//        {
-//            "from": "./zoom-sdk-electron-master",
-//            "to": "./zoom-sdk-electron-master",
-//            //需要被拷贝的资源
-////            "filter": [
-////              //  "!./sdk/mac/ZoomSDK/*.*"
-////
-////                "./build",
-////                "./demo",
-////                "./lib",
-////                //"./sdk",
-////
-////                "./binding.gyp"
-////
-//////                "./sdk/mac/zoomsdk.node.dSYM/**/*",
-//////                "./sdk/mac/zoomsdk_render.node.dSYM/**/*",
-//////                "./sdk/mac/zoomsdk.node",
-//////                "./sdk/mac/zoomsdk_render.node"
-////            ]
-//        }
+        "package.json"
     ],
-
-
-
-
-
-
     "extraResources": [
         "./extraResources/${os}/${arch}/**/*",
         "./extraResources/${os}/common/**/*"
@@ -87,14 +61,22 @@
         "artifactName": "dev-${productName}-setup-${version}.${ext}",
         "installerLanguages": "zh_CN"
     },
+    "forceCodeSigning": false,
     "publish": {
         "provider": "s3",
         "bucket": "mtool",
         "region": "cn-north-1",
         "endpoint": "https://s3.cn-north-1.amazonaws.com.cn",
         "path": "dev-releases/${os}"
-    }
-    // 指定平台的环境变量
-    //platform: process.env.BUILD_TARGET
-    //"artifactBuildCompleted": ""
+    },
+    "afterPack": "/Users/mxj/zoom/mtool/dev-builder-dev-afterPackHook.js",
+    "afterSign": "/Users/mxj/zoom/mtool/dev-builder-dev-afterPackHook2.js",
+    "afterAllArtifactBuild": "/Users/mxj/zoom/mtool/dev-builder-dev-afterPackHook3.js",
+    "onNodeModuleFile": "/Users/mxj/zoom/mtool/dev-builder-dev-afterPackHook4.js"
+    //"AfterPackContext": "/Users/mxj/zoom/mtool/dev-builder-dev-afterPackHook5.js"
+    //"buildResult": "/Users/mxj/zoom/mtool/dev-builder-dev-afterPackHook6.js"
+
+
+
+
 }
