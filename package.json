@@ -73,7 +73,7 @@
     "tcp-ping": "^0.1.1",
     "typescript": "^3.0.1",
     "uuid": "^3.0.1",
-    "systeminformation": "^3.37.4"
+    "systeminformation": "^5.3.1"
   },
   "devDependencies": {
     "@types/node": "^10.5.2",
